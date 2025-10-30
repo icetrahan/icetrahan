@@ -1,28 +1,32 @@
 name: Generate GitHub Metrics
 on:
-  schedule: [{cron: "0 * * * *"}]  # runs every hour
-  workflow_dispatch:                # allows manual run
+  schedule: [{ cron: "0 */6 * * *" }]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
-  github-metrics:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Generate metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN }}              # reads your stats
+          committer_token: ${{ secrets.METRICS_TOKEN }}    # 🔑 uses PAT to push
+          committer_branch: main
+          filename: github-metrics.svg
           user: icetrahan
           template: classic
           base: header, activity, community, repositories, metadata
-          config_timezone: America/New_York
-
+          config_timezone: America/Chicago
           plugin_languages: yes
           plugin_languages_details: percentage
           plugin_languages_sections: most-used
-          plugin_languages_limit: 8
-
+          plugin_languages_limit: 10
           plugin_repositories: yes
           plugin_followup: yes
           plugin_lines: yes
-          plugin_achievements: yes
-          plugin_achievements_display: detailed
+          plugin_achievements: no

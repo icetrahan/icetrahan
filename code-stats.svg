@@ -18,7 +18,7 @@
   
   <!-- Title -->
   <text x="20" y="32" class="title">📊 My Code Contributions</text>
-  <text x="20" y="52" class="subtitle">489.9k lines added • 567 commits • 38 repos analyzed</text>
+  <text x="20" y="52" class="subtitle">489.9k lines added • 568 commits • 38 repos analyzed</text>
 
   <!-- TypeScript -->
   <g transform="translate(20, 85)">

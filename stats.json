@@ -1,12 +1,12 @@
 {
   "total_repos_analyzed": 38,
-  "total_lines_added": 489911,
-  "total_commits": 568,
+  "total_lines_added": 490108,
+  "total_commits": 570,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 389294,
-      "percentage": 79.5,
+      "lines_added": 389317,
+      "percentage": 79.4,
       "color": "#3178c6"
     },
     {
@@ -17,8 +17,8 @@
     },
     {
       "name": "Python",
-      "lines_added": 44230,
-      "percentage": 9.0,
+      "lines_added": 44404,
+      "percentage": 9.1,
       "color": "#3572A5"
     },
     {

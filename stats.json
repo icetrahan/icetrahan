@@ -1,0 +1,63 @@
+{
+  "total_repos": 72,
+  "total_bytes": 1168569185,
+  "total_lines": 29214229,
+  "languages": [
+    {
+      "name": "C++",
+      "bytes": 786451910,
+      "lines": 19661297,
+      "percentage": 67.3,
+      "color": "#f34b7d"
+    },
+    {
+      "name": "Mathematica",
+      "bytes": 133832368,
+      "lines": 3345809,
+      "percentage": 11.5,
+      "color": "#858585"
+    },
+    {
+      "name": "Dart",
+      "bytes": 60091075,
+      "lines": 1502276,
+      "percentage": 5.1,
+      "color": "#00B4AB"
+    },
+    {
+      "name": "C#",
+      "bytes": 51972522,
+      "lines": 1299313,
+      "percentage": 4.4,
+      "color": "#178600"
+    },
+    {
+      "name": "TypeScript",
+      "bytes": 33838225,
+      "lines": 845955,
+      "percentage": 2.9,
+      "color": "#3178c6"
+    },
+    {
+      "name": "C",
+      "bytes": 33733185,
+      "lines": 843329,
+      "percentage": 2.9,
+      "color": "#555555"
+    },
+    {
+      "name": "Python",
+      "bytes": 26401054,
+      "lines": 660026,
+      "percentage": 2.3,
+      "color": "#3572A5"
+    },
+    {
+      "name": "HLSL",
+      "bytes": 14791046,
+      "lines": 369776,
+      "percentage": 1.3,
+      "color": "#858585"
+    }
+  ]
+}

@@ -1,149 +1,158 @@
-<svg width="450" height="378" viewBox="0 0 450 378" xmlns="http://www.w3.org/2000/svg">
+<svg width="480" height="450" viewBox="0 0 480 450" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&amp;display=swap');
       .bg { fill: #0d1117; }
-      .title { font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 600; fill: #58a6ff; }
-      .lang-name { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; fill: #c9d1d9; }
-      .lang-stats { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #8b949e; }
-      .bar-bg { fill: #21262d; rx: 4; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 600; fill: #58a6ff; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 12px; fill: #8b949e; }
+      .lang-name { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #c9d1d9; }
+      .lang-stats { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 12px; fill: #8b949e; }
+      .bar-bg { fill: #21262d; }
     </style>
   </defs>
   
   <!-- Background -->
-  <rect class="bg" width="450" height="378" rx="8"/>
+  <rect class="bg" width="480" height="450" rx="6"/>
   
   <!-- Border -->
-  <rect x="0.5" y="0.5" width="449" height="377" rx="8" fill="none" stroke="#30363d" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="479" height="449" rx="6" fill="none" stroke="#30363d" stroke-width="1"/>
   
   <!-- Title -->
-  <text x="20" y="32" class="title">📊 Code Statistics</text>
+  <text x="20" y="32" class="title">📊 My Code Contributions</text>
+  <text x="20" y="52" class="subtitle">489.9k lines added • 567 commits • 38 repos analyzed</text>
 
-  <!-- C++ -->
-  <g transform="translate(20, 60)">
-    <!-- Language name -->
-    <text x="0" y="12" class="lang-name">C++</text>
+  <!-- TypeScript -->
+  <g transform="translate(20, 85)">
+    <!-- Language name with color dot -->
+    <circle cx="6" cy="8" r="6" fill="#3178c6"/>
+    <text x="18" y="12" class="lang-name">TypeScript</text>
     
     <!-- Bar background -->
-    <rect x="0" y="18" width="250" height="8" class="bar-bg"/>
+    <rect x="0" y="20" width="300" height="10" class="bar-bg" rx="5"/>
     
     <!-- Bar fill -->
-    <rect x="0" y="18" width="168.2510372717042" height="8" fill="#f34b7d" rx="4"/>
+    <rect x="0" y="20" width="238.47953932859593" height="10" fill="#3178c6" rx="5"/>
     
-    <!-- Stats -->
-    <text x="260" y="12" class="lang-stats">19.7M lines</text>
-    <text x="260" y="26" class="lang-stats">67.3%</text>
-  </g>
-
-  <!-- Mathematica -->
-  <g transform="translate(20, 96)">
-    <!-- Language name -->
-    <text x="0" y="12" class="lang-name">Mathematica</text>
-    
-    <!-- Bar background -->
-    <rect x="0" y="18" width="250" height="8" class="bar-bg"/>
-    
-    <!-- Bar fill -->
-    <rect x="0" y="18" width="28.631674041618684" height="8" fill="#858585" rx="4"/>
-    
-    <!-- Stats -->
-    <text x="260" y="12" class="lang-stats">3.3M lines</text>
-    <text x="260" y="26" class="lang-stats">11.5%</text>
+    <!-- Stats on right -->
+    <text x="315" y="14" class="lang-stats">389.3k lines</text>
+    <text x="315" y="30" class="lang-stats" style="fill: #58a6ff;">79.5%</text>
   </g>
 
   <!-- Dart -->
-  <g transform="translate(20, 132)">
-    <!-- Language name -->
-    <text x="0" y="12" class="lang-name">Dart</text>
+  <g transform="translate(20, 125)">
+    <!-- Language name with color dot -->
+    <circle cx="6" cy="8" r="6" fill="#00B4AB"/>
+    <text x="18" y="12" class="lang-name">Dart</text>
     
     <!-- Bar background -->
-    <rect x="0" y="18" width="250" height="8" class="bar-bg"/>
+    <rect x="0" y="20" width="300" height="10" class="bar-bg" rx="5"/>
     
     <!-- Bar fill -->
-    <rect x="0" y="18" width="12.855694761453085" height="8" fill="#00B4AB" rx="4"/>
+    <rect x="0" y="20" width="29.297966184758632" height="10" fill="#00B4AB" rx="5"/>
     
-    <!-- Stats -->
-    <text x="260" y="12" class="lang-stats">1.5M lines</text>
-    <text x="260" y="26" class="lang-stats">5.1%</text>
-  </g>
-
-  <!-- C# -->
-  <g transform="translate(20, 168)">
-    <!-- Language name -->
-    <text x="0" y="12" class="lang-name">C#</text>
-    
-    <!-- Bar background -->
-    <rect x="0" y="18" width="250" height="8" class="bar-bg"/>
-    
-    <!-- Bar fill -->
-    <rect x="0" y="18" width="11.118837178647665" height="8" fill="#178600" rx="4"/>
-    
-    <!-- Stats -->
-    <text x="260" y="12" class="lang-stats">1.3M lines</text>
-    <text x="260" y="26" class="lang-stats">4.4%</text>
-  </g>
-
-  <!-- TypeScript -->
-  <g transform="translate(20, 204)">
-    <!-- Language name -->
-    <text x="0" y="12" class="lang-name">TypeScript</text>
-    
-    <!-- Bar background -->
-    <rect x="0" y="18" width="250" height="8" class="bar-bg"/>
-    
-    <!-- Bar fill -->
-    <rect x="0" y="18" width="7.23924296360767" height="8" fill="#3178c6" rx="4"/>
-    
-    <!-- Stats -->
-    <text x="260" y="12" class="lang-stats">846k lines</text>
-    <text x="260" y="26" class="lang-stats">2.9%</text>
-  </g>
-
-  <!-- C -->
-  <g transform="translate(20, 240)">
-    <!-- Language name -->
-    <text x="0" y="12" class="lang-name">C</text>
-    
-    <!-- Bar background -->
-    <rect x="0" y="18" width="250" height="8" class="bar-bg"/>
-    
-    <!-- Bar fill -->
-    <rect x="0" y="18" width="7.216771037822634" height="8" fill="#555555" rx="4"/>
-    
-    <!-- Stats -->
-    <text x="260" y="12" class="lang-stats">843k lines</text>
-    <text x="260" y="26" class="lang-stats">2.9%</text>
+    <!-- Stats on right -->
+    <text x="315" y="14" class="lang-stats">47.8k lines</text>
+    <text x="315" y="30" class="lang-stats" style="fill: #58a6ff;">9.8%</text>
   </g>
 
   <!-- Python -->
-  <g transform="translate(20, 276)">
-    <!-- Language name -->
-    <text x="0" y="12" class="lang-name">Python</text>
+  <g transform="translate(20, 165)">
+    <!-- Language name with color dot -->
+    <circle cx="6" cy="8" r="6" fill="#3572A5"/>
+    <text x="18" y="12" class="lang-name">Python</text>
     
     <!-- Bar background -->
-    <rect x="0" y="18" width="250" height="8" class="bar-bg"/>
+    <rect x="0" y="20" width="300" height="10" class="bar-bg" rx="5"/>
     
     <!-- Bar fill -->
-    <rect x="0" y="18" width="5.648158093438003" height="8" fill="#3572A5" rx="4"/>
+    <rect x="0" y="20" width="27.095074736584174" height="10" fill="#3572A5" rx="5"/>
     
-    <!-- Stats -->
-    <text x="260" y="12" class="lang-stats">660k lines</text>
-    <text x="260" y="26" class="lang-stats">2.3%</text>
+    <!-- Stats on right -->
+    <text x="315" y="14" class="lang-stats">44.2k lines</text>
+    <text x="315" y="30" class="lang-stats" style="fill: #58a6ff;">9.0%</text>
   </g>
 
-  <!-- HLSL -->
-  <g transform="translate(20, 312)">
-    <!-- Language name -->
-    <text x="0" y="12" class="lang-name">HLSL</text>
+  <!-- C++ -->
+  <g transform="translate(20, 205)">
+    <!-- Language name with color dot -->
+    <circle cx="6" cy="8" r="6" fill="#f34b7d"/>
+    <text x="18" y="12" class="lang-name">C++</text>
     
     <!-- Bar background -->
-    <rect x="0" y="18" width="250" height="8" class="bar-bg"/>
+    <rect x="0" y="20" width="300" height="10" class="bar-bg" rx="5"/>
     
     <!-- Bar fill -->
-    <rect x="0" y="18" width="3.1643496572263285" height="8" fill="#858585" rx="4"/>
+    <rect x="0" y="20" width="2.2188189169321246" height="10" fill="#f34b7d" rx="5"/>
     
-    <!-- Stats -->
-    <text x="260" y="12" class="lang-stats">370k lines</text>
-    <text x="260" y="26" class="lang-stats">1.3%</text>
+    <!-- Stats on right -->
+    <text x="315" y="14" class="lang-stats">3.6k lines</text>
+    <text x="315" y="30" class="lang-stats" style="fill: #58a6ff;">0.7%</text>
+  </g>
+
+  <!-- JavaScript -->
+  <g transform="translate(20, 245)">
+    <!-- Language name with color dot -->
+    <circle cx="6" cy="8" r="6" fill="#f1e05a"/>
+    <text x="18" y="12" class="lang-name">JavaScript</text>
+    
+    <!-- Bar background -->
+    <rect x="0" y="20" width="300" height="10" class="bar-bg" rx="5"/>
+    
+    <!-- Bar fill -->
+    <rect x="0" y="20" width="2" height="10" fill="#f1e05a" rx="5"/>
+    
+    <!-- Stats on right -->
+    <text x="315" y="14" class="lang-stats">2.4k lines</text>
+    <text x="315" y="30" class="lang-stats" style="fill: #58a6ff;">0.5%</text>
+  </g>
+
+  <!-- SQL -->
+  <g transform="translate(20, 285)">
+    <!-- Language name with color dot -->
+    <circle cx="6" cy="8" r="6" fill="#e38c00"/>
+    <text x="18" y="12" class="lang-name">SQL</text>
+    
+    <!-- Bar background -->
+    <rect x="0" y="20" width="300" height="10" class="bar-bg" rx="5"/>
+    
+    <!-- Bar fill -->
+    <rect x="0" y="20" width="2" height="10" fill="#e38c00" rx="5"/>
+    
+    <!-- Stats on right -->
+    <text x="315" y="14" class="lang-stats">1.4k lines</text>
+    <text x="315" y="30" class="lang-stats" style="fill: #58a6ff;">0.3%</text>
+  </g>
+
+  <!-- Shell -->
+  <g transform="translate(20, 325)">
+    <!-- Language name with color dot -->
+    <circle cx="6" cy="8" r="6" fill="#89e051"/>
+    <text x="18" y="12" class="lang-name">Shell</text>
+    
+    <!-- Bar background -->
+    <rect x="0" y="20" width="300" height="10" class="bar-bg" rx="5"/>
+    
+    <!-- Bar fill -->
+    <rect x="0" y="20" width="2" height="10" fill="#89e051" rx="5"/>
+    
+    <!-- Stats on right -->
+    <text x="315" y="14" class="lang-stats">665 lines</text>
+    <text x="315" y="30" class="lang-stats" style="fill: #58a6ff;">0.1%</text>
+  </g>
+
+  <!-- Swift -->
+  <g transform="translate(20, 365)">
+    <!-- Language name with color dot -->
+    <circle cx="6" cy="8" r="6" fill="#F05138"/>
+    <text x="18" y="12" class="lang-name">Swift</text>
+    
+    <!-- Bar background -->
+    <rect x="0" y="20" width="300" height="10" class="bar-bg" rx="5"/>
+    
+    <!-- Bar fill -->
+    <rect x="0" y="20" width="2" height="10" fill="#F05138" rx="5"/>
+    
+    <!-- Stats on right -->
+    <text x="315" y="14" class="lang-stats">259 lines</text>
+    <text x="315" y="30" class="lang-stats" style="fill: #58a6ff;">0.1%</text>
   </g>
 </svg>

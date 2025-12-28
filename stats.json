@@ -1,24 +1,24 @@
 {
   "total_repos_analyzed": 39,
-  "total_lines_added": 490168,
-  "total_commits": 589,
+  "total_lines_added": 492046,
+  "total_commits": 597,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 389377,
-      "percentage": 79.4,
+      "lines_added": 391204,
+      "percentage": 79.5,
       "color": "#3178c6"
     },
     {
       "name": "Dart",
       "lines_added": 47826,
-      "percentage": 9.8,
+      "percentage": 9.7,
       "color": "#00B4AB"
     },
     {
       "name": "Python",
       "lines_added": 44404,
-      "percentage": 9.1,
+      "percentage": 9.0,
       "color": "#3572A5"
     },
     {
@@ -35,7 +35,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 1409,
+      "lines_added": 1460,
       "percentage": 0.3,
       "color": "#e38c00"
     },

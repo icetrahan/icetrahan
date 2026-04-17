@@ -1,6 +1,67 @@
 {
-  "total_repos_analyzed": 0,
-  "total_lines_added": 0,
-  "total_commits": 0,
-  "languages": []
+  "total_repos_analyzed": 46,
+  "total_lines_added": 720876,
+  "total_commits": 1052,
+  "languages": [
+    {
+      "name": "TypeScript",
+      "lines_added": 568501,
+      "percentage": 78.9,
+      "color": "#3178c6"
+    },
+    {
+      "name": "Python",
+      "lines_added": 89968,
+      "percentage": 12.5,
+      "color": "#3572A5"
+    },
+    {
+      "name": "Dart",
+      "lines_added": 47826,
+      "percentage": 6.6,
+      "color": "#00B4AB"
+    },
+    {
+      "name": "SQL",
+      "lines_added": 3773,
+      "percentage": 0.5,
+      "color": "#e38c00"
+    },
+    {
+      "name": "C++",
+      "lines_added": 3622,
+      "percentage": 0.5,
+      "color": "#f34b7d"
+    },
+    {
+      "name": "Shell",
+      "lines_added": 3619,
+      "percentage": 0.5,
+      "color": "#89e051"
+    },
+    {
+      "name": "JavaScript",
+      "lines_added": 3117,
+      "percentage": 0.4,
+      "color": "#f1e05a"
+    },
+    {
+      "name": "Swift",
+      "lines_added": 259,
+      "percentage": 0.0,
+      "color": "#F05138"
+    },
+    {
+      "name": "Rust",
+      "lines_added": 149,
+      "percentage": 0.0,
+      "color": "#dea584"
+    },
+    {
+      "name": "Kotlin",
+      "lines_added": 36,
+      "percentage": 0.0,
+      "color": "#A97BFF"
+    }
+  ]
 }

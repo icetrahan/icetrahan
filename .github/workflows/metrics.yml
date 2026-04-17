@@ -31,7 +31,7 @@ jobs:
         
       - name: 📊 Generate Code Stats
         env:
-          METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          METRICS_TOKEN: ${{ secrets.METRICS_PAT }}
         run: python scripts/generate_stats.py
         
       - name: Commit and push
@@ -51,8 +51,8 @@ jobs:
       - name: 📊 Generate Main Metrics
         uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          committer_token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.METRICS_PAT }}
+          committer_token: ${{ secrets.METRICS_PAT }}
           committer_branch: main
           filename: github-metrics-main.svg
           user: icetrahan

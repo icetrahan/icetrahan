@@ -1,12 +1,12 @@
 {
-  "total_repos_analyzed": 46,
-  "total_lines_added": 722348,
-  "total_commits": 1066,
+  "total_repos_analyzed": 47,
+  "total_lines_added": 724317,
+  "total_commits": 1071,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 568891,
-      "percentage": 78.8,
+      "lines_added": 568896,
+      "percentage": 78.5,
       "color": "#3178c6"
     },
     {
@@ -20,6 +20,12 @@
       "lines_added": 47826,
       "percentage": 6.6,
       "color": "#00B4AB"
+    },
+    {
+      "name": "JavaScript",
+      "lines_added": 5081,
+      "percentage": 0.7,
+      "color": "#f1e05a"
     },
     {
       "name": "SQL",
@@ -38,12 +44,6 @@
       "lines_added": 3619,
       "percentage": 0.5,
       "color": "#89e051"
-    },
-    {
-      "name": "JavaScript",
-      "lines_added": 3117,
-      "percentage": 0.4,
-      "color": "#f1e05a"
     },
     {
       "name": "Swift",

@@ -1,137 +1,394 @@
-name: Generate GitHub Metrics
+#!/usr/bin/env python3
+"""
+Generate personal GitHub code statistics.
 
-on:
-  schedule:
-    - cron: "0 */6 * * *"
-  workflow_dispatch:
-  push:
-    branches:
-      - main
+Outputs:
+  - stats.json      : raw numbers for debugging / other tools
+  - code-stats.svg  : rendered badge for the profile README
 
-permissions:
-  contents: write
+Environment:
+  METRICS_TOKEN     : GitHub PAT with `repo` + `read:user` scopes (required)
+  GITHUB_USER       : override the default user (optional, defaults to 'icetrahan')
+  MAX_REPOS         : cap the number of repos scanned (optional, default 200)
+  REQUEST_TIMEOUT   : per-request timeout in seconds (optional, default 30)
+"""
 
-concurrency:
-  group: metrics-${{ github.ref }}
-  cancel-in-progress: false
+from __future__ import annotations
 
-jobs:
-  # ==============================================
-  # CUSTOM CODE STATS - Our Own Analytics
-  # ==============================================
-  code-stats:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+import json
+import os
+import sys
+import time
+from datetime import datetime, timezone
+from typing import Any
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+import requests
 
-      - name: Install dependencies
-        run: pip install requests
+sys.stdout.reconfigure(line_buffering=True)
 
-      - name: 📊 Generate Code Stats
-        env:
-          METRICS_TOKEN: ${{ secrets.METRICS_PAT }}
-        run: python scripts/generate_stats.py
+USER = os.environ.get("GITHUB_USER", "icetrahan")
+TOKEN = os.environ.get("METRICS_TOKEN")
+MAX_REPOS = int(os.environ.get("MAX_REPOS", "200"))
+REQUEST_TIMEOUT = int(os.environ.get("REQUEST_TIMEOUT", "30"))
+API = "https://api.github.com"
 
-      - name: Commit and push
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add code-stats.svg stats.json
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-          git commit -m "📊 Update code statistics"
-          for i in 1 2 3 4 5; do
-            if git push; then
-              echo "Push succeeded on attempt $i"
-              exit 0
-            fi
-            echo "Push failed on attempt $i, rebasing on remote..."
-            git pull --rebase origin main
-            sleep $((RANDOM % 5 + 1))
-          done
-          echo "Push failed after 5 attempts"
-          exit 1
+if not TOKEN:
+    print("[FATAL] METRICS_TOKEN env var is missing", flush=True)
+    sys.exit(1)
 
-  # ==============================================
-  # MAIN METRICS - Profile Overview + Habits
-  # ==============================================
-  github-metrics-main:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📊 Generate Main Metrics
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_PAT }}
-          committer_token: ${{ secrets.METRICS_PAT }}
-          committer_branch: main
-          filename: github-metrics-main.svg
-          user: icetrahan
-          template: classic
-          base: header, activity, community, repositories
-          base_indepth: yes
-          config_timezone: America/Chicago
-          config_display: large
-          config_padding: 6%
+SESSION = requests.Session()
+SESSION.headers.update(
+    {
+        "Authorization": f"Bearer {TOKEN}",
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": f"{USER}-stats-generator",
+    }
+)
 
-          # CRITICAL: Include ALL repos (private + org + collaborator)
-          repositories_forks: yes
-          repositories_affiliations: owner, collaborator, organization_member
-          repositories_skipped: ""
 
-          # Lines of code (all repos)
-          plugin_lines: yes
-          plugin_lines_history_limit: 1
-          plugin_lines_repositories_limit: 100
-          plugin_lines_sections: base
+# ----------------------------------------------------------------------------
+# Logging helpers
+# ----------------------------------------------------------------------------
 
-          # Coding habits
-          plugin_habits: yes
-          plugin_habits_from: 1000
-          plugin_habits_days: 30
-          plugin_habits_charts: yes
-          plugin_habits_charts_type: classic
-          plugin_habits_trim: yes
+_START = time.monotonic()
 
-          # Follow up stats
-          plugin_followup: yes
-          plugin_followup_archived: yes
-          plugin_followup_sections: repositories, user
-          plugin_followup_indepth: yes
 
-  # ==============================================
-  # SNAKE - Contribution Animation
-  # ==============================================
-  github-snake:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+def log(msg: str) -> None:
+    elapsed = time.monotonic() - _START
+    print(f"[{elapsed:7.2f}s] {msg}", flush=True)
 
-      - name: 🐍 Generate Snake
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: icetrahan
-          outputs: |
-            dist/snake.svg
-            dist/snake-dark.svg?palette=github-dark
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Push Snake
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: dist
-          keep_history: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+def warn(msg: str) -> None:
+    log(f"WARN: {msg}")
+
+
+def die(msg: str, code: int = 1) -> None:
+    log(f"FATAL: {msg}")
+    sys.exit(code)
+
+
+# ----------------------------------------------------------------------------
+# HTTP with timeouts, retries, rate-limit awareness
+# ----------------------------------------------------------------------------
+
+
+def gh_get(path: str, params: dict[str, Any] | None = None, *, max_retries: int = 4) -> requests.Response:
+    """GET a GitHub API path with timeout + retry + rate-limit handling."""
+    url = path if path.startswith("http") else f"{API}{path}"
+    last_exc: Exception | None = None
+
+    for attempt in range(1, max_retries + 1):
+        try:
+            log(f"GET {url}  params={params or {}}  (attempt {attempt}/{max_retries})")
+            resp = SESSION.get(url, params=params, timeout=REQUEST_TIMEOUT)
+        except requests.RequestException as exc:
+            last_exc = exc
+            warn(f"network error: {exc!r}")
+            time.sleep(2 ** attempt)
+            continue
+
+        remaining = resp.headers.get("X-RateLimit-Remaining")
+        if remaining is not None:
+            log(f"  -> status={resp.status_code}  rate-remaining={remaining}")
+        else:
+            log(f"  -> status={resp.status_code}")
+
+        if resp.status_code == 200:
+            return resp
+
+        if resp.status_code == 202:
+            return resp
+
+        if resp.status_code in (403, 429):
+            reset = int(resp.headers.get("X-RateLimit-Reset", "0") or 0)
+            wait = max(5, min(60, reset - int(time.time()))) if reset else 15
+            warn(f"rate limited (status {resp.status_code}); sleeping {wait}s")
+            time.sleep(wait)
+            continue
+
+        if 500 <= resp.status_code < 600:
+            warn(f"server error {resp.status_code}; backing off")
+            time.sleep(2 ** attempt)
+            continue
+
+        warn(f"unexpected status {resp.status_code}: {resp.text[:200]}")
+        return resp
+
+    die(f"request failed after {max_retries} attempts: {url} ({last_exc!r})")
+    raise SystemExit(1)
+
+
+def gh_paginate(path: str, params: dict[str, Any] | None = None, *, hard_limit: int | None = None) -> list[dict]:
+    """Fetch all pages of a list endpoint. Optional hard_limit caps total items."""
+    params = dict(params or {})
+    params.setdefault("per_page", 100)
+    out: list[dict] = []
+    url: str | None = path
+    page = 0
+
+    while url:
+        page += 1
+        resp = gh_get(url, params=params if page == 1 else None)
+        if resp.status_code != 200:
+            warn(f"paginate stop: status {resp.status_code}")
+            break
+        data = resp.json()
+        if not isinstance(data, list):
+            warn("paginate stop: non-list response")
+            break
+        out.extend(data)
+        log(f"  page {page}: +{len(data)} items (total {len(out)})")
+        if hard_limit and len(out) >= hard_limit:
+            log(f"  hard_limit {hard_limit} reached")
+            return out[:hard_limit]
+        url = resp.links.get("next", {}).get("url")
+
+    return out
+
+
+# ----------------------------------------------------------------------------
+# Data gathering
+# ----------------------------------------------------------------------------
+
+
+def fetch_user() -> dict:
+    log(f"Fetching user profile for '{USER}'")
+    return gh_get(f"/users/{USER}").json()
+
+
+def fetch_repos() -> list[dict]:
+    log("Fetching repositories (owner + collaborator + member)")
+    repos = gh_paginate(
+        "/user/repos",
+        {"affiliation": "owner,collaborator,organization_member", "sort": "updated"},
+        hard_limit=MAX_REPOS,
+    )
+    log(f"Got {len(repos)} repos")
+    return repos
+
+
+def fetch_languages(repo_full_name: str) -> dict[str, int]:
+    resp = gh_get(f"/repos/{repo_full_name}/languages")
+    if resp.status_code != 200:
+        return {}
+    return resp.json() or {}
+
+
+def fetch_commit_count(repo_full_name: str) -> int:
+    """Use the Link header trick to get total commits by USER without paginating."""
+    resp = gh_get(
+        f"/repos/{repo_full_name}/commits",
+        {"author": USER, "per_page": 1},
+    )
+    if resp.status_code != 200:
+        return 0
+    if "last" in resp.links:
+        try:
+            return int(resp.links["last"]["url"].rsplit("page=", 1)[-1])
+        except (ValueError, IndexError):
+            return 0
+    return len(resp.json() or [])
+
+
+# ----------------------------------------------------------------------------
+# Aggregation
+# ----------------------------------------------------------------------------
+
+
+def build_stats() -> dict:
+    user = fetch_user()
+    repos = fetch_repos()
+
+    languages: dict[str, int] = {}
+    total_stars = 0
+    total_forks = 0
+    total_size_kb = 0
+    total_commits = 0
+    repos_scanned = 0
+
+    for i, repo in enumerate(repos, start=1):
+        name = repo["full_name"]
+        log(f"--- repo {i}/{len(repos)}: {name}")
+
+        total_stars += repo.get("stargazers_count", 0)
+        total_forks += repo.get("forks_count", 0)
+        total_size_kb += repo.get("size", 0)
+
+        langs = fetch_languages(name)
+        for lang, byte_count in langs.items():
+            languages[lang] = languages.get(lang, 0) + byte_count
+
+        commits = fetch_commit_count(name)
+        total_commits += commits
+        log(f"    stars={repo.get('stargazers_count', 0)} "
+            f"forks={repo.get('forks_count', 0)} "
+            f"commits_by_user={commits} "
+            f"langs={len(langs)}")
+
+        repos_scanned += 1
+
+    total_bytes = sum(languages.values()) or 1
+    top_languages = sorted(languages.items(), key=lambda kv: kv[1], reverse=True)[:8]
+    top_languages_pct = [
+        {"name": lang, "bytes": b, "pct": round(b * 100 / total_bytes, 2)}
+        for lang, b in top_languages
+    ]
+
+    return {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "user": {
+            "login": user.get("login"),
+            "name": user.get("name"),
+            "followers": user.get("followers", 0),
+            "following": user.get("following", 0),
+            "public_repos": user.get("public_repos", 0),
+            "created_at": user.get("created_at"),
+        },
+        "totals": {
+            "repos_scanned": repos_scanned,
+            "stars": total_stars,
+            "forks": total_forks,
+            "size_kb": total_size_kb,
+            "commits_by_user": total_commits,
+            "total_bytes_of_code": total_bytes,
+        },
+        "top_languages": top_languages_pct,
+    }
+
+
+# ----------------------------------------------------------------------------
+# SVG rendering
+# ----------------------------------------------------------------------------
+
+LANG_COLORS = {
+    "Python": "#3572A5",
+    "JavaScript": "#f1e05a",
+    "TypeScript": "#3178c6",
+    "C#": "#178600",
+    "C++": "#f34b7d",
+    "C": "#555555",
+    "HTML": "#e34c26",
+    "CSS": "#563d7c",
+    "Shell": "#89e051",
+    "Go": "#00ADD8",
+    "Rust": "#dea584",
+    "Java": "#b07219",
+    "Kotlin": "#A97BFF",
+    "Ruby": "#701516",
+    "PHP": "#4F5D95",
+    "Lua": "#000080",
+    "Dart": "#00B4AB",
+    "Vue": "#41b883",
+    "Dockerfile": "#384d54",
+}
+
+
+def _color_for(lang: str) -> str:
+    return LANG_COLORS.get(lang, "#8b949e")
+
+
+def render_svg(stats: dict) -> str:
+    t = stats["totals"]
+    langs = stats["top_languages"]
+    now = stats["generated_at"][:10]
+
+    width, height = 520, 260
+    bar_y = 170
+    bar_h = 14
+    bar_w = width - 40
+    x = 20
+
+    bar_segments = []
+    legend_items = []
+    running_x = x
+    for i, lang in enumerate(langs):
+        seg_w = bar_w * (lang["pct"] / 100.0)
+        color = _color_for(lang["name"])
+        bar_segments.append(
+            f'<rect x="{running_x:.2f}" y="{bar_y}" width="{seg_w:.2f}" '
+            f'height="{bar_h}" fill="{color}"/>'
+        )
+        running_x += seg_w
+
+        col = i % 2
+        row = i // 2
+        lx = 20 + col * 240
+        ly = 205 + row * 18
+        legend_items.append(
+            f'<circle cx="{lx + 6}" cy="{ly - 4}" r="5" fill="{color}"/>'
+            f'<text x="{lx + 18}" y="{ly}" font-size="12" fill="#c9d1d9">'
+            f'{lang["name"]} <tspan fill="#8b949e">{lang["pct"]}%</tspan></text>'
+        )
+
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
+  <style>
+    .title {{ font: 600 18px 'Segoe UI', Ubuntu, sans-serif; fill: #58a6ff; }}
+    .label {{ font: 12px 'Segoe UI', Ubuntu, sans-serif; fill: #8b949e; }}
+    .value {{ font: 600 16px 'Segoe UI', Ubuntu, sans-serif; fill: #c9d1d9; }}
+    .sub   {{ font: 10px 'Segoe UI', Ubuntu, sans-serif; fill: #6e7681; }}
+  </style>
+  <rect width="100%" height="100%" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text x="20" y="32" class="title">📊 {stats['user'].get('login', USER)} — code stats</text>
+  <text x="20" y="50" class="sub">generated {now}</text>
+
+  <g transform="translate(20,80)">
+    <text class="label" y="0">Repos scanned</text>
+    <text class="value" y="20">{t['repos_scanned']}</text>
+  </g>
+  <g transform="translate(150,80)">
+    <text class="label" y="0">Stars</text>
+    <text class="value" y="20">{t['stars']}</text>
+  </g>
+  <g transform="translate(240,80)">
+    <text class="label" y="0">Forks</text>
+    <text class="value" y="20">{t['forks']}</text>
+  </g>
+  <g transform="translate(330,80)">
+    <text class="label" y="0">Commits</text>
+    <text class="value" y="20">{t['commits_by_user']}</text>
+  </g>
+  <g transform="translate(430,80)">
+    <text class="label" y="0">Code (MB)</text>
+    <text class="value" y="20">{t['total_bytes_of_code'] / 1_000_000:.1f}</text>
+  </g>
+
+  <text x="20" y="155" class="label">Top languages</text>
+  {''.join(bar_segments)}
+  {''.join(legend_items)}
+</svg>
+"""
+
+
+# ----------------------------------------------------------------------------
+# Main
+# ----------------------------------------------------------------------------
+
+
+def main() -> int:
+    log(f"Starting stats generation for {USER}")
+    log(f"MAX_REPOS={MAX_REPOS}  REQUEST_TIMEOUT={REQUEST_TIMEOUT}s")
+
+    try:
+        stats = build_stats()
+    except SystemExit:
+        raise
+    except Exception as exc:
+        die(f"unhandled error while building stats: {exc!r}")
+        return 1
+
+    log("Writing stats.json")
+    with open("stats.json", "w", encoding="utf-8") as fh:
+        json.dump(stats, fh, indent=2)
+
+    log("Writing code-stats.svg")
+    with open("code-stats.svg", "w", encoding="utf-8") as fh:
+        fh.write(render_svg(stats))
+
+    log("Done.")
+    log(f"Summary: {json.dumps(stats['totals'])}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

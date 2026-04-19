@@ -1,18 +1,3 @@
-#!/usr/bin/env python3
-"""
-Generate personal GitHub code statistics.
-
-Outputs:
-  - stats.json      : raw numbers for debugging / other tools
-  - code-stats.svg  : rendered badge for the profile README
-
-Environment:
-  METRICS_TOKEN     : GitHub PAT with `repo` + `read:user` scopes (required)
-  GITHUB_USER       : override the default user (optional, defaults to 'icetrahan')
-  MAX_REPOS         : cap the number of repos scanned (optional, default 200)
-  REQUEST_TIMEOUT   : per-request timeout in seconds (optional, default 30)
-"""
-
 from __future__ import annotations
 
 import json

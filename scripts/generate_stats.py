@@ -3,14 +3,18 @@
 Fetches YOUR personal GitHub contribution statistics across all repositories.
 Counts lines YOU added (not repo totals).
 
+Uses incremental caching: only re-scans commits newer than the last seen SHA.
+
 Environment variables:
   METRICS_TOKEN / GITHUB_TOKEN  - GitHub PAT (required)
   GITHUB_USER                   - username (default: icetrahan)
   MAX_REPOS                     - cap repos scanned (default: 500)
-  MAX_COMMITS_PER_REPO          - cap commits inspected per repo (default: 300)
+  MAX_COMMITS_PER_REPO          - cap commits inspected per repo (default: 500)
   REQUEST_TIMEOUT               - per-request timeout seconds (default: 25)
   SKIP_FORKS                    - "1" to skip forks (default: 1)
   SKIP_ARCHIVED                 - "1" to skip archived (default: 1)
+  MAX_RATELIMIT_WAIT            - max seconds to wait for rate limit reset (default: 300)
+  CACHE_FILE                    - path to cache file (default: stats.json)
 """
 
 from __future__ import annotations
@@ -29,10 +33,16 @@ sys.stdout.reconfigure(line_buffering=True)
 GITHUB_TOKEN = os.environ.get("METRICS_TOKEN") or os.environ.get("GITHUB_TOKEN")
 USERNAME = os.environ.get("GITHUB_USER", "icetrahan")
 MAX_REPOS = int(os.environ.get("MAX_REPOS", "500"))
-MAX_COMMITS_PER_REPO = int(os.environ.get("MAX_COMMITS_PER_REPO", "300"))
+MAX_COMMITS_PER_REPO = int(os.environ.get("MAX_COMMITS_PER_REPO", "500"))
 REQUEST_TIMEOUT = int(os.environ.get("REQUEST_TIMEOUT", "25"))
 SKIP_FORKS = os.environ.get("SKIP_FORKS", "1") == "1"
 SKIP_ARCHIVED = os.environ.get("SKIP_ARCHIVED", "1") == "1"
+MAX_RATELIMIT_WAIT = int(os.environ.get("MAX_RATELIMIT_WAIT", "300"))
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
+CACHE_FILE = os.environ.get("CACHE_FILE", os.path.join(REPO_ROOT, "stats.json"))
+SVG_FILE = os.path.join(REPO_ROOT, "code-stats.svg")
 
 API = "https://api.github.com"
 START = time.monotonic()
@@ -68,7 +78,7 @@ EXT_TO_LANG = {
 
 
 # ---------------------------------------------------------------------------
-# HTTP with timeouts, retries, rate-limit handling
+# Rate-limit-aware HTTP
 # ---------------------------------------------------------------------------
 
 SESSION = requests.Session()
@@ -83,22 +93,37 @@ if GITHUB_TOKEN:
     )
 
 
-def _handle_rate_limit(resp: requests.Response) -> bool:
-    """Return True if we should retry after sleeping."""
+class RateLimitExhausted(Exception):
+    """Raised when we've decided to stop due to rate limiting."""
+
+
+def _sleep_for_rate_limit(resp: requests.Response) -> bool:
+    """Return True if we slept and should retry, False if we should give up."""
     remaining = resp.headers.get("X-RateLimit-Remaining")
+    reset = int(resp.headers.get("X-RateLimit-Reset", "0") or 0)
+
     if remaining is not None and remaining.isdigit() and int(remaining) == 0:
-        reset = int(resp.headers.get("X-RateLimit-Reset", "0") or 0)
-        wait = max(5, min(120, reset - int(time.time()))) if reset else 30
-        warn(f"rate limit hit, sleeping {wait}s (reset in {max(0, reset - int(time.time()))}s)")
+        wait = max(5, reset - int(time.time())) if reset else 60
+        if wait > MAX_RATELIMIT_WAIT:
+            warn(f"rate limit reset in {wait}s exceeds MAX_RATELIMIT_WAIT={MAX_RATELIMIT_WAIT}s; stopping")
+            raise RateLimitExhausted()
+        warn(f"primary rate limit hit; sleeping {wait}s")
         time.sleep(wait)
         return True
+
     if resp.status_code in (403, 429):
         retry_after = resp.headers.get("Retry-After")
-        wait = int(retry_after) if retry_after and retry_after.isdigit() else 30
-        wait = min(wait, 120)
-        warn(f"status {resp.status_code}, backing off {wait}s")
+        if retry_after and retry_after.isdigit():
+            wait = int(retry_after)
+        else:
+            wait = 30
+        if wait > MAX_RATELIMIT_WAIT:
+            warn(f"secondary rate limit retry-after={wait}s exceeds budget; stopping")
+            raise RateLimitExhausted()
+        warn(f"secondary rate limit (status {resp.status_code}); sleeping {wait}s")
         time.sleep(wait)
         return True
+
     return False
 
 
@@ -106,16 +131,15 @@ def gh_get(
     path: str,
     params: dict[str, Any] | None = None,
     *,
-    max_retries: int = 4,
+    max_retries: int = 3,
     quiet: bool = False,
 ) -> requests.Response | None:
-    """GET with timeout, retries, and rate-limit awareness. Returns None on hard failure."""
     url = path if path.startswith("http") else f"{API}{path}"
-
     for attempt in range(1, max_retries + 1):
         try:
             if not quiet:
-                log(f"GET {url[len(API):] if url.startswith(API) else url}  params={params or {}}  (try {attempt}/{max_retries})")
+                short = url[len(API):] if url.startswith(API) else url
+                log(f"GET {short}  params={params or {}}  (try {attempt}/{max_retries})")
             resp = SESSION.get(url, params=params, timeout=REQUEST_TIMEOUT)
         except requests.RequestException as exc:
             warn(f"network error: {exc!r}; retry in {2 ** attempt}s")
@@ -123,17 +147,12 @@ def gh_get(
             continue
 
         if not quiet:
-            rem = resp.headers.get("X-RateLimit-Remaining", "?")
-            log(f"  -> {resp.status_code}  rate-remaining={rem}")
+            log(f"  -> {resp.status_code}  rate-remaining={resp.headers.get('X-RateLimit-Remaining', '?')}")
 
-        if resp.status_code == 200:
-            return resp
-        if resp.status_code == 409:  # empty repo
-            return resp
-        if resp.status_code == 404:
+        if resp.status_code in (200, 404, 409):
             return resp
 
-        if _handle_rate_limit(resp):
+        if _sleep_for_rate_limit(resp):
             continue
 
         if 500 <= resp.status_code < 600:
@@ -144,8 +163,39 @@ def gh_get(
         warn(f"unexpected {resp.status_code}: {resp.text[:200]}")
         return resp
 
-    warn(f"giving up on {url} after {max_retries} attempts")
+    warn(f"giving up on {url}")
     return None
+
+
+# ---------------------------------------------------------------------------
+# Cache
+# ---------------------------------------------------------------------------
+
+
+def load_cache() -> dict:
+    """Load previous stats.json cache if present."""
+    if not os.path.exists(CACHE_FILE):
+        log("no cache file present (first run)")
+        return {}
+    try:
+        with open(CACHE_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        cache = data.get("_cache", {})
+        log(f"loaded cache with {len(cache)} repo entries")
+        return cache
+    except (json.JSONDecodeError, OSError) as exc:
+        warn(f"could not read cache: {exc!r}")
+        return {}
+
+
+def cache_entry_for(cache: dict, full_name: str) -> dict:
+    """Normalize/return the cache entry for a repo."""
+    entry = cache.get(full_name) or {}
+    entry.setdefault("last_sha", None)
+    entry.setdefault("total_commits", 0)
+    entry.setdefault("total_lines", 0)
+    entry.setdefault("lang_lines", {})
+    return entry
 
 
 # ---------------------------------------------------------------------------
@@ -154,7 +204,7 @@ def gh_get(
 
 
 def fetch_all_repos() -> list[dict]:
-    log(f"Fetching repositories (affiliation=owner,collaborator,organization_member)")
+    log("Fetching repositories (owner + collaborator + organization_member)")
     repos: list[dict] = []
     page = 1
     while True:
@@ -170,28 +220,24 @@ def fetch_all_repos() -> list[dict]:
         if resp is None or resp.status_code != 200:
             warn(f"repo fetch stopped on page {page}")
             break
-        data = resp.json()
+        data = resp.json() or []
         if not data:
             break
         repos.extend(data)
         log(f"  page {page}: +{len(data)} repos (total {len(repos)})")
         if len(repos) >= MAX_REPOS:
-            log(f"  MAX_REPOS={MAX_REPOS} reached")
             repos = repos[:MAX_REPOS]
+            log(f"  MAX_REPOS={MAX_REPOS} reached")
             break
         page += 1
     return repos
 
 
-def fetch_user_commits_stats(owner: str, repo: str) -> tuple[dict[str, int], int, int]:
-    """Fetch per-file additions for commits authored by USER in owner/repo."""
-    lang_additions: dict[str, int] = defaultdict(int)
-    total_additions = 0
-    total_commits = 0
-
+def fetch_new_commit_shas(owner: str, repo: str, last_seen_sha: str | None) -> list[str]:
+    """Fetch commit SHAs by USER newer than last_seen_sha (commits come newest-first)."""
+    shas: list[str] = []
     page = 1
-    commit_shas: list[str] = []
-    while len(commit_shas) < MAX_COMMITS_PER_REPO:
+    while len(shas) < MAX_COMMITS_PER_REPO:
         resp = gh_get(
             f"/repos/{owner}/{repo}/commits",
             {"author": USERNAME, "per_page": 100, "page": page},
@@ -200,22 +246,32 @@ def fetch_user_commits_stats(owner: str, repo: str) -> tuple[dict[str, int], int
         if resp is None:
             break
         if resp.status_code == 409:
-            log(f"    {owner}/{repo} is empty")
-            return lang_additions, 0, 0
+            return []
         if resp.status_code != 200:
             break
         commits = resp.json() or []
         if not commits:
             break
-        commit_shas.extend(c["sha"] for c in commits)
-        page += 1
+        for c in commits:
+            if last_seen_sha and c["sha"] == last_seen_sha:
+                log(f"    reached cached SHA {last_seen_sha[:7]}, stopping")
+                return shas
+            shas.append(c["sha"])
+            if len(shas) >= MAX_COMMITS_PER_REPO:
+                break
         if len(commits) < 100:
             break
+        page += 1
+    return shas
 
-    commit_shas = commit_shas[:MAX_COMMITS_PER_REPO]
-    log(f"    found {len(commit_shas)} commits by {USERNAME}, fetching diffs...")
 
-    for i, sha in enumerate(commit_shas, start=1):
+def fetch_commit_diffs(owner: str, repo: str, shas: list[str]) -> tuple[dict[str, int], int, int]:
+    """Return (lang_additions, total_additions, commits_scanned)."""
+    lang_additions: dict[str, int] = defaultdict(int)
+    total_additions = 0
+    scanned = 0
+
+    for i, sha in enumerate(shas, start=1):
         resp = gh_get(f"/repos/{owner}/{repo}/commits/{sha}", quiet=True)
         if resp is None or resp.status_code != 200:
             continue
@@ -230,16 +286,16 @@ def fetch_user_commits_stats(owner: str, repo: str) -> tuple[dict[str, int], int
             if lang:
                 lang_additions[lang] += additions
                 total_additions += additions
-        total_commits += 1
+        scanned += 1
 
         if i % 25 == 0:
-            log(f"    ...{i}/{len(commit_shas)} diffs scanned, {total_additions} lines so far")
+            log(f"    ...{i}/{len(shas)} diffs scanned, {total_additions} new lines so far")
 
-    return lang_additions, total_additions, total_commits
+    return lang_additions, total_additions, scanned
 
 
 # ---------------------------------------------------------------------------
-# Rendering (unchanged output format)
+# Rendering
 # ---------------------------------------------------------------------------
 
 
@@ -261,12 +317,7 @@ def generate_svg(lang_stats: dict, total_lines: int, total_commits: int, total_r
     for lang, lines in sorted_langs:
         pct = (lines / total * 100) if total > 0 else 0
         lang_data.append(
-            {
-                "name": lang,
-                "lines": lines,
-                "pct": pct,
-                "color": LANG_COLORS.get(lang, "#858585"),
-            }
+            {"name": lang, "lines": lines, "pct": pct, "color": LANG_COLORS.get(lang, "#858585")}
         )
 
     width = 480
@@ -294,7 +345,6 @@ def generate_svg(lang_stats: dict, total_lines: int, total_commits: int, total_r
 
     y_offset = header_height + 5
     bar_width = width - padding * 2 - 140
-
     for lang in lang_data:
         fill_width = max((lang["pct"] / 100) * bar_width, 2)
         svg += f'''
@@ -308,31 +358,69 @@ def generate_svg(lang_stats: dict, total_lines: int, total_commits: int, total_r
   </g>
 '''
         y_offset += bar_height
-
     svg += '</svg>'
     return svg
 
 
-def generate_json_stats(lang_stats: dict, total_lines: int, total_commits: int, repo_count: int) -> dict:
+# ---------------------------------------------------------------------------
+# Output
+# ---------------------------------------------------------------------------
+
+
+def build_output(cache: dict) -> dict:
+    """Aggregate all cached per-repo data into the final stats.json structure."""
+    lang_stats: dict[str, int] = defaultdict(int)
+    total_lines = 0
+    total_commits = 0
+    repos_with_contributions = 0
+
+    for entry in cache.values():
+        if entry.get("total_commits", 0) <= 0:
+            continue
+        repos_with_contributions += 1
+        total_commits += entry["total_commits"]
+        total_lines += entry["total_lines"]
+        for lang, lines in entry.get("lang_lines", {}).items():
+            lang_stats[lang] += lines
+
     sorted_langs = sorted(lang_stats.items(), key=lambda x: x[1], reverse=True)[:10]
     total = sum(l[1] for l in sorted_langs) or 1
-    stats = {
-        "total_repos_analyzed": repo_count,
+
+    languages = [
+        {
+            "name": lang,
+            "lines_added": lines,
+            "percentage": round((lines / total * 100) if total else 0, 1),
+            "color": LANG_COLORS.get(lang, "#858585"),
+        }
+        for lang, lines in sorted_langs
+    ]
+
+    return {
+        "total_repos_analyzed": repos_with_contributions,
         "total_lines_added": total_lines,
         "total_commits": total_commits,
-        "languages": [],
+        "languages": languages,
+        "_cache": cache,
     }
-    for lang, lines in sorted_langs:
-        pct = (lines / total * 100) if total > 0 else 0
-        stats["languages"].append(
-            {
-                "name": lang,
-                "lines_added": lines,
-                "percentage": round(pct, 1),
-                "color": LANG_COLORS.get(lang, "#858585"),
-            }
-        )
-    return stats
+
+
+def write_outputs(cache: dict) -> None:
+    output = build_output(cache)
+    with open(CACHE_FILE, "w", encoding="utf-8") as f:
+        json.dump(output, f, indent=2)
+    log(f"wrote {CACHE_FILE}")
+
+    lang_stats = {lang["name"]: lang["lines_added"] for lang in output["languages"]}
+    svg = generate_svg(
+        lang_stats,
+        output["total_lines_added"],
+        output["total_commits"],
+        output["total_repos_analyzed"],
+    )
+    with open(SVG_FILE, "w", encoding="utf-8") as f:
+        f.write(svg)
+    log(f"wrote {SVG_FILE}")
 
 
 # ---------------------------------------------------------------------------
@@ -345,7 +433,8 @@ def main() -> int:
         log("FATAL: no GitHub token (METRICS_TOKEN or GITHUB_TOKEN)")
         return 1
 
-    log(f"user={USERNAME}  MAX_REPOS={MAX_REPOS}  MAX_COMMITS_PER_REPO={MAX_COMMITS_PER_REPO}  timeout={REQUEST_TIMEOUT}s")
+    log(f"user={USERNAME}  MAX_REPOS={MAX_REPOS}  MAX_COMMITS_PER_REPO={MAX_COMMITS_PER_REPO}")
+    log(f"timeout={REQUEST_TIMEOUT}s  max_ratelimit_wait={MAX_RATELIMIT_WAIT}s")
     log(f"skip_forks={SKIP_FORKS}  skip_archived={SKIP_ARCHIVED}")
 
     rl = gh_get("/rate_limit")
@@ -354,63 +443,86 @@ def main() -> int:
         log(f"rate limit: {core.get('remaining')}/{core.get('limit')} remaining, "
             f"resets in {max(0, core.get('reset', 0) - int(time.time()))}s")
 
+    cache = load_cache()
     repos = fetch_all_repos()
-    log(f"Scanning {len(repos)} repositories")
+    log(f"Scanning {len(repos)} repositories (with incremental cache)")
 
-    lang_stats: dict[str, int] = defaultdict(int)
-    total_lines = 0
-    total_commits = 0
-    repos_with_contributions = 0
+    rate_limit_exhausted = False
+    new_repos = 0
+    cached_hits = 0
+    delta_lines_total = 0
 
     for i, repo in enumerate(repos, start=1):
+        if rate_limit_exhausted:
+            log(f"[{i}/{len(repos)}] skipped (rate limit exhausted): {repo['full_name']}")
+            continue
+
         owner = repo["owner"]["login"]
         name = repo["name"]
-        is_fork = repo.get("fork", False)
-        is_archived = repo.get("archived", False)
+        full = f"{owner}/{name}"
 
-        if SKIP_FORKS and is_fork:
-            log(f"[{i}/{len(repos)}] skip fork: {owner}/{name}")
+        if SKIP_FORKS and repo.get("fork"):
+            log(f"[{i}/{len(repos)}] skip fork: {full}")
             continue
-        if SKIP_ARCHIVED and is_archived:
-            log(f"[{i}/{len(repos)}] skip archived: {owner}/{name}")
+        if SKIP_ARCHIVED and repo.get("archived"):
+            log(f"[{i}/{len(repos)}] skip archived: {full}")
             continue
 
-        log(f"[{i}/{len(repos)}] scanning {owner}/{name}")
+        entry = cache_entry_for(cache, full)
+        last_sha = entry["last_sha"]
+        log(f"[{i}/{len(repos)}] {full}  (cached: {entry['total_commits']} commits, last_sha={last_sha[:7] if last_sha else 'none'})")
+
         try:
-            repo_langs, repo_lines, repo_commits = fetch_user_commits_stats(owner, name)
-        except Exception as exc:
-            warn(f"error scanning {owner}/{name}: {exc!r}")
+            new_shas = fetch_new_commit_shas(owner, name, last_sha)
+        except RateLimitExhausted:
+            rate_limit_exhausted = True
+            warn("stopping scan early; will save progress")
             continue
 
-        if repo_commits > 0:
-            repos_with_contributions += 1
-            log(f"    OK: {repo_commits} commits, {format_number(repo_lines)} lines")
-            for lang, lines in repo_langs.items():
-                lang_stats[lang] += lines
-            total_lines += repo_lines
-            total_commits += repo_commits
-        else:
-            log(f"    no commits by {USERNAME}")
+        if not new_shas:
+            log(f"    no new commits since last scan")
+            cached_hits += 1
+            continue
+
+        log(f"    {len(new_shas)} new commits to scan")
+        if last_sha is None:
+            new_repos += 1
+
+        try:
+            new_langs, new_lines, new_count = fetch_commit_diffs(owner, name, new_shas)
+        except RateLimitExhausted:
+            rate_limit_exhausted = True
+            warn("stopping scan early; will save progress")
+            continue
+
+        for lang, lines in new_langs.items():
+            entry["lang_lines"][lang] = entry["lang_lines"].get(lang, 0) + lines
+        entry["total_lines"] += new_lines
+        entry["total_commits"] += new_count
+        entry["last_sha"] = new_shas[0]
+        cache[full] = entry
+        delta_lines_total += new_lines
+        log(f"    +{new_count} commits, +{format_number(new_lines)} lines")
+
+        if i % 10 == 0:
+            write_outputs(cache)
+            log(f"    [checkpoint] progress saved")
 
     log("=" * 60)
-    log(f"TOTAL: {format_number(total_lines)} lines across {total_commits} commits")
-    log(f"Contributing to {repos_with_contributions}/{len(repos)} repos")
+    log(f"Completed. new_repos={new_repos}  cached_hits={cached_hits}  "
+        f"new_lines_this_run={format_number(delta_lines_total)}")
+    if rate_limit_exhausted:
+        log("NOTE: scan stopped early due to rate limiting; next run will resume")
 
-    svg_content = generate_svg(lang_stats, total_lines, total_commits, repos_with_contributions)
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    svg_path = os.path.join(script_dir, "..", "code-stats.svg")
-    with open(svg_path, "w", encoding="utf-8") as f:
-        f.write(svg_content)
-    log(f"wrote {svg_path}")
+    write_outputs(cache)
 
-    json_stats = generate_json_stats(lang_stats, total_lines, total_commits, repos_with_contributions)
-    json_path = os.path.join(script_dir, "..", "stats.json")
-    with open(json_path, "w", encoding="utf-8") as f:
-        json.dump(json_stats, f, indent=2)
-    log(f"wrote {json_path}")
-
+    with open(CACHE_FILE, "r", encoding="utf-8") as f:
+        final = json.load(f)
+    log(f"TOTALS: {format_number(final['total_lines_added'])} lines, "
+        f"{format_number(final['total_commits'])} commits, "
+        f"{final['total_repos_analyzed']} repos")
     log("Contribution breakdown:")
-    for lang in json_stats["languages"]:
+    for lang in final["languages"]:
         log(f"   {lang['name']}: {format_number(lang['lines_added'])} lines ({lang['percentage']}%)")
 
     return 0

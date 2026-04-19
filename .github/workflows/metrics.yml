@@ -11,6 +11,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: metrics-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   # ==============================================
   # CUSTOM CODE STATS - Our Own Analytics
@@ -20,27 +24,41 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          
+
       - name: Install dependencies
         run: pip install requests
-        
+
       - name: 📊 Generate Code Stats
         env:
           METRICS_TOKEN: ${{ secrets.METRICS_PAT }}
         run: python scripts/generate_stats.py
-        
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add code-stats.svg stats.json
-          git diff --staged --quiet || git commit -m "📊 Update code statistics"
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "📊 Update code statistics"
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "Push succeeded on attempt $i"
+              exit 0
+            fi
+            echo "Push failed on attempt $i, rebasing on remote..."
+            git pull --rebase origin main
+            sleep $((RANDOM % 5 + 1))
+          done
+          echo "Push failed after 5 attempts"
+          exit 1
 
   # ==============================================
   # MAIN METRICS - Profile Overview + Habits
@@ -62,18 +80,18 @@ jobs:
           config_timezone: America/Chicago
           config_display: large
           config_padding: 6%
-          
+
           # CRITICAL: Include ALL repos (private + org + collaborator)
           repositories_forks: yes
           repositories_affiliations: owner, collaborator, organization_member
           repositories_skipped: ""
-          
+
           # Lines of code (all repos)
           plugin_lines: yes
           plugin_lines_history_limit: 1
           plugin_lines_repositories_limit: 100
           plugin_lines_sections: base
-          
+
           # Coding habits
           plugin_habits: yes
           plugin_habits_from: 1000
@@ -81,7 +99,7 @@ jobs:
           plugin_habits_charts: yes
           plugin_habits_charts_type: classic
           plugin_habits_trim: yes
-          
+
           # Follow up stats
           plugin_followup: yes
           plugin_followup_archived: yes
@@ -98,7 +116,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: 🐍 Generate Snake
         uses: Platane/snk/svg-only@v3
         with:
@@ -108,7 +126,7 @@ jobs:
             dist/snake-dark.svg?palette=github-dark
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+
       - name: Push Snake
         uses: crazy-max/ghaction-github-pages@v4
         with:

@@ -1,11 +1,11 @@
 {
   "total_repos_analyzed": 47,
-  "total_lines_added": 727228,
-  "total_commits": 1095,
+  "total_lines_added": 727437,
+  "total_commits": 1097,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 569466,
+      "lines_added": 569570,
       "percentage": 78.3,
       "color": "#3178c6"
     },
@@ -34,16 +34,16 @@
       "color": "#e38c00"
     },
     {
+      "name": "Shell",
+      "lines_added": 3724,
+      "percentage": 0.5,
+      "color": "#89e051"
+    },
+    {
       "name": "C++",
       "lines_added": 3622,
       "percentage": 0.5,
       "color": "#f34b7d"
-    },
-    {
-      "name": "Shell",
-      "lines_added": 3619,
-      "percentage": 0.5,
-      "color": "#89e051"
     },
     {
       "name": "Swift",
@@ -134,11 +134,11 @@
       }
     },
     "icetrahan/primal-web": {
-      "last_sha": "de2981836c0a471d62607f246701bdc85776f637",
-      "total_commits": 5,
-      "total_lines": 38142,
+      "last_sha": "7ac5aca2de53d158f49a4ff53d863b85ad5c3e7a",
+      "total_commits": 6,
+      "total_lines": 38246,
       "lang_lines": {
-        "TypeScript": 37547,
+        "TypeScript": 37651,
         "Python": 329,
         "JavaScript": 266
       }
@@ -209,12 +209,12 @@
       }
     },
     "icetrahan/primal-patcher": {
-      "last_sha": "7c843fa19c4a473d0f48ae10485c3f520eb1520e",
-      "total_commits": 1,
-      "total_lines": 1045,
+      "last_sha": "64645f7660a9831104e17a1b204912d162406e0d",
+      "total_commits": 2,
+      "total_lines": 1150,
       "lang_lines": {
         "Python": 400,
-        "Shell": 645
+        "Shell": 750
       }
     },
     "icetrahan/primal-deathmatch-external": {

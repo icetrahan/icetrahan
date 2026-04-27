@@ -1,30 +1,30 @@
 {
   "total_repos_analyzed": 47,
-  "total_lines_added": 730161,
-  "total_commits": 1132,
+  "total_lines_added": 731102,
+  "total_commits": 1134,
   "languages": [
     {
       "name": "TypeScript",
       "lines_added": 570664,
-      "percentage": 78.2,
+      "percentage": 78.1,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 94888,
+      "lines_added": 94889,
       "percentage": 13.0,
       "color": "#3572A5"
     },
     {
       "name": "Dart",
       "lines_added": 47826,
-      "percentage": 6.6,
+      "percentage": 6.5,
       "color": "#00B4AB"
     },
     {
       "name": "JavaScript",
-      "lines_added": 5156,
-      "percentage": 0.7,
+      "lines_added": 6096,
+      "percentage": 0.8,
       "color": "#f1e05a"
     },
     {
@@ -74,11 +74,11 @@
       }
     },
     "icetrahan/primal-overlay": {
-      "last_sha": "c77e7427f0bed2e6cb4c3512c7eee406d5568bea",
-      "total_commits": 2,
-      "total_lines": 2039,
+      "last_sha": "84648d2354cdc168dd9880cb51c30daf428b0d83",
+      "total_commits": 3,
+      "total_lines": 2979,
       "lang_lines": {
-        "JavaScript": 2039
+        "JavaScript": 2979
       }
     },
     "Arvo-OFM/ofmanager-api": {
@@ -152,11 +152,11 @@
       }
     },
     "icetrahan/primal-discord": {
-      "last_sha": "dce95e83fcabe1ed47ca0ebadc91f67a76188fc8",
-      "total_commits": 4,
-      "total_lines": 12467,
+      "last_sha": "9cfd79f007f0a69250ec078253bc5f94b93b57c3",
+      "total_commits": 5,
+      "total_lines": 12468,
       "lang_lines": {
-        "Python": 12467
+        "Python": 12468
       }
     },
     "Arvo-Devs/onlysearch": {

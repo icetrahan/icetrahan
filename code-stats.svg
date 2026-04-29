@@ -12,7 +12,7 @@
   <rect class="bg" width="480" height="450" rx="6"/>
   <rect x="0.5" y="0.5" width="479" height="449" rx="6" fill="none" stroke="#30363d" stroke-width="1"/>
   <text x="20" y="32" class="title">📊 My Code Contributions</text>
-  <text x="20" y="52" class="subtitle">735.5k lines added • 1.1k commits • 47 repos analyzed</text>
+  <text x="20" y="52" class="subtitle">735.5k lines added • 1.2k commits • 47 repos analyzed</text>
 
   <g transform="translate(20, 85)">
     <circle cx="6" cy="8" r="6" fill="#3178c6"/>

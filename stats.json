@@ -1,18 +1,18 @@
 {
   "total_repos_analyzed": 47,
-  "total_lines_added": 748335,
-  "total_commits": 1162,
+  "total_lines_added": 751038,
+  "total_commits": 1166,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 572431,
-      "percentage": 76.5,
+      "lines_added": 572477,
+      "percentage": 76.2,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 109854,
-      "percentage": 14.7,
+      "lines_added": 112392,
+      "percentage": 15.0,
       "color": "#3572A5"
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 4332,
+      "lines_added": 4451,
       "percentage": 0.6,
       "color": "#e38c00"
     },
@@ -117,12 +117,12 @@
       }
     },
     "icetrahan/primal-backend": {
-      "last_sha": "0324176f2f3a91a73012001bcd1327e494133a3c",
-      "total_commits": 13,
-      "total_lines": 34494,
+      "last_sha": "33d44aeabda68906aaa01447871f499f4936de44",
+      "total_commits": 14,
+      "total_lines": 35496,
       "lang_lines": {
-        "Python": 33182,
-        "SQL": 1312
+        "Python": 34065,
+        "SQL": 1431
       }
     },
     "icetrahan/primal-workers": {
@@ -134,29 +134,29 @@
       }
     },
     "icetrahan/primal-web": {
-      "last_sha": "b4b2e9b8d9934a60afea4fe8e722732a0fea881c",
-      "total_commits": 10,
-      "total_lines": 40798,
+      "last_sha": "d0e531988dc4ac536929c3cb6f4b98dc4fc503ef",
+      "total_commits": 11,
+      "total_lines": 40844,
       "lang_lines": {
-        "TypeScript": 40203,
+        "TypeScript": 40249,
         "Python": 329,
         "JavaScript": 266
       }
     },
     "icetrahan/primal-survival": {
-      "last_sha": "32ecac58d0c1cbd4510f1b04ff1b224e012bdf00",
-      "total_commits": 6,
-      "total_lines": 9271,
+      "last_sha": "82ef67614b42b92742a120f21d976bcf0648b3ec",
+      "total_commits": 7,
+      "total_lines": 10188,
       "lang_lines": {
-        "Python": 9271
+        "Python": 10188
       }
     },
     "icetrahan/primal-discord": {
-      "last_sha": "49a10a1d1f742e87fc1ef5c41df23399e6117c66",
-      "total_commits": 7,
-      "total_lines": 17015,
+      "last_sha": "f2a293713295a4f14d76038c8b0eb0df531fb141",
+      "total_commits": 8,
+      "total_lines": 17753,
       "lang_lines": {
-        "Python": 17015
+        "Python": 17753
       }
     },
     "Arvo-Devs/onlysearch": {

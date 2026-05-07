@@ -1,12 +1,12 @@
 {
   "total_repos_analyzed": 47,
-  "total_lines_added": 754163,
-  "total_commits": 1201,
+  "total_lines_added": 755299,
+  "total_commits": 1206,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 572622,
-      "percentage": 75.9,
+      "lines_added": 573758,
+      "percentage": 76.0,
       "color": "#3178c6"
     },
     {
@@ -82,8 +82,8 @@
       }
     },
     "Arvo-OFM/ofmanager-api": {
-      "last_sha": "f14bdc23ac3f501901258f176445e6c112ae1183",
-      "total_commits": 172,
+      "last_sha": "7164b8270f5a4e9f817255dac21c513cad825539",
+      "total_commits": 173,
       "total_lines": 66122,
       "lang_lines": {
         "TypeScript": 64511,
@@ -92,11 +92,11 @@
       }
     },
     "Arvo-OFM/betterfans": {
-      "last_sha": "be8389f0b5f6449ad661c9a64e22e1b2de9c1dd2",
-      "total_commits": 1,
-      "total_lines": 3,
+      "last_sha": "d493ad5f9ed8b36cfdd1496167ea76f7dec136c9",
+      "total_commits": 3,
+      "total_lines": 139,
       "lang_lines": {
-        "TypeScript": 3
+        "TypeScript": 139
       }
     },
     "Arvo-Devs/ofmanager-apps": {
@@ -226,11 +226,11 @@
       }
     },
     "icetrahan/Fan-Manager": {
-      "last_sha": "ce0c436383d320131240b5afc0e5d979bc212652",
-      "total_commits": 36,
-      "total_lines": 17963,
+      "last_sha": "53bdac94ecef9920c49c18e881acef43a0523e07",
+      "total_commits": 38,
+      "total_lines": 18963,
       "lang_lines": {
-        "TypeScript": 17963
+        "TypeScript": 18963
       }
     },
     "icetrahan/PTEggos": {

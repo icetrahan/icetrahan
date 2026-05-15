@@ -1,18 +1,18 @@
 {
   "total_repos_analyzed": 48,
-  "total_lines_added": 773775,
-  "total_commits": 1293,
+  "total_lines_added": 777413,
+  "total_commits": 1297,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 578771,
-      "percentage": 74.8,
+      "lines_added": 582409,
+      "percentage": 74.9,
       "color": "#3178c6"
     },
     {
       "name": "Python",
       "lines_added": 121548,
-      "percentage": 15.7,
+      "percentage": 15.6,
       "color": "#3572A5"
     },
     {
@@ -474,11 +474,11 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "57a61952032fb2837b8bf990a0b5a64bfe6294ed",
-      "total_commits": 16,
-      "total_lines": 4140,
+      "last_sha": "dccc706219085eaa5b13d4a0959b1caaf607d419",
+      "total_commits": 20,
+      "total_lines": 7778,
       "lang_lines": {
-        "TypeScript": 4140
+        "TypeScript": 7778
       }
     }
   }

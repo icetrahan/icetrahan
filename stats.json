@@ -1,30 +1,30 @@
 {
   "total_repos_analyzed": 48,
-  "total_lines_added": 777426,
-  "total_commits": 1301,
+  "total_lines_added": 783866,
+  "total_commits": 1309,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 582422,
-      "percentage": 74.9,
+      "lines_added": 582828,
+      "percentage": 74.4,
       "color": "#3178c6"
     },
     {
       "name": "Python",
       "lines_added": 121548,
-      "percentage": 15.6,
+      "percentage": 15.5,
       "color": "#3572A5"
     },
     {
       "name": "Dart",
       "lines_added": 47826,
-      "percentage": 6.2,
+      "percentage": 6.1,
       "color": "#00B4AB"
     },
     {
       "name": "JavaScript",
-      "lines_added": 13298,
-      "percentage": 1.7,
+      "lines_added": 19332,
+      "percentage": 2.5,
       "color": "#f1e05a"
     },
     {
@@ -474,11 +474,12 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "cc54bb66ae617b17474085bb45b0217d07bc671c",
-      "total_commits": 21,
-      "total_lines": 7791,
+      "last_sha": "4f9fd24ca969e13b33d09c29a72fdad26a720fb1",
+      "total_commits": 29,
+      "total_lines": 14231,
       "lang_lines": {
-        "TypeScript": 7791
+        "TypeScript": 8197,
+        "JavaScript": 6034
       }
     }
   }

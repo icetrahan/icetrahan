@@ -1,18 +1,18 @@
 {
   "total_repos_analyzed": 48,
-  "total_lines_added": 783866,
-  "total_commits": 1312,
+  "total_lines_added": 788683,
+  "total_commits": 1316,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 582828,
-      "percentage": 74.4,
+      "lines_added": 583799,
+      "percentage": 74.0,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 121548,
-      "percentage": 15.5,
+      "lines_added": 125245,
+      "percentage": 15.9,
       "color": "#3572A5"
     },
     {
@@ -23,7 +23,7 @@
     },
     {
       "name": "JavaScript",
-      "lines_added": 19332,
+      "lines_added": 19481,
       "percentage": 2.5,
       "color": "#f1e05a"
     },
@@ -74,11 +74,11 @@
       }
     },
     "icetrahan/primal-overlay": {
-      "last_sha": "d24599666dae3cdd9b395d4bd152af9210e9a5c0",
-      "total_commits": 7,
-      "total_lines": 10181,
+      "last_sha": "b57403f66975347baa2493286e19e034fbd3ea69",
+      "total_commits": 8,
+      "total_lines": 10330,
       "lang_lines": {
-        "JavaScript": 10181
+        "JavaScript": 10330
       }
     },
     "Arvo-OFM/ofmanager-api": {
@@ -117,11 +117,11 @@
       }
     },
     "icetrahan/primal-backend": {
-      "last_sha": "98ce4ac69f605dd77ff055e84463baa7a63cd3f3",
-      "total_commits": 22,
-      "total_lines": 39942,
+      "last_sha": "01d13b9b995468525c12a44cd26258af1de16f8e",
+      "total_commits": 23,
+      "total_lines": 42675,
       "lang_lines": {
-        "Python": 38436,
+        "Python": 41169,
         "SQL": 1506
       }
     },
@@ -134,21 +134,21 @@
       }
     },
     "icetrahan/primal-web": {
-      "last_sha": "79abd5bc74df5fea88bc5dc7e40457fa4b08380f",
-      "total_commits": 20,
-      "total_lines": 41778,
+      "last_sha": "26993629f059c58e97a038007c7c20cbeb41f57e",
+      "total_commits": 21,
+      "total_lines": 42749,
       "lang_lines": {
-        "TypeScript": 41183,
+        "TypeScript": 42154,
         "Python": 329,
         "JavaScript": 266
       }
     },
     "icetrahan/primal-survival": {
-      "last_sha": "7b19044667777f4d06a06746a8992d0079abfcf9",
-      "total_commits": 8,
-      "total_lines": 10203,
+      "last_sha": "68ccd885016c108f5713708dc8d5982a1459e272",
+      "total_commits": 9,
+      "total_lines": 11167,
       "lang_lines": {
-        "Python": 10203
+        "Python": 11167
       }
     },
     "icetrahan/primal-discord": {

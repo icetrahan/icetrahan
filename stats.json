@@ -1,35 +1,35 @@
 {
   "total_repos_analyzed": 48,
-  "total_lines_added": 789261,
-  "total_commits": 1333,
+  "total_lines_added": 790676,
+  "total_commits": 1336,
   "languages": [
     {
       "name": "TypeScript",
       "lines_added": 584351,
-      "percentage": 74.0,
+      "percentage": 73.9,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 125271,
+      "lines_added": 125757,
       "percentage": 15.9,
       "color": "#3572A5"
     },
     {
       "name": "Dart",
       "lines_added": 47826,
-      "percentage": 6.1,
+      "percentage": 6.0,
       "color": "#00B4AB"
     },
     {
       "name": "JavaScript",
-      "lines_added": 19481,
-      "percentage": 2.5,
+      "lines_added": 20393,
+      "percentage": 2.6,
       "color": "#f1e05a"
     },
     {
       "name": "SQL",
-      "lines_added": 4526,
+      "lines_added": 4543,
       "percentage": 0.6,
       "color": "#e38c00"
     },
@@ -74,11 +74,11 @@
       }
     },
     "icetrahan/primal-overlay": {
-      "last_sha": "b57403f66975347baa2493286e19e034fbd3ea69",
-      "total_commits": 8,
-      "total_lines": 10330,
+      "last_sha": "d1c14f3990a4b6419794bc8db8f6ba0127b021d7",
+      "total_commits": 9,
+      "total_lines": 11242,
       "lang_lines": {
-        "JavaScript": 10330
+        "JavaScript": 11242
       }
     },
     "Arvo-OFM/ofmanager-api": {
@@ -117,12 +117,12 @@
       }
     },
     "icetrahan/primal-backend": {
-      "last_sha": "7db7b21a6e44be33b7cea5317ad865be079823e6",
-      "total_commits": 24,
-      "total_lines": 42676,
+      "last_sha": "2459d97d9c68d0e70630af40dc645b14222d5978",
+      "total_commits": 25,
+      "total_lines": 43163,
       "lang_lines": {
-        "Python": 41170,
-        "SQL": 1506
+        "Python": 41640,
+        "SQL": 1523
       }
     },
     "icetrahan/primal-workers": {
@@ -152,11 +152,11 @@
       }
     },
     "icetrahan/primal-discord": {
-      "last_sha": "8f4394ae1a2879ed2920e959e62b6c44c13cafea",
-      "total_commits": 17,
-      "total_lines": 22370,
+      "last_sha": "4d71ef00a905dd2c2fa98ab98cb0617816f5dbb0",
+      "total_commits": 18,
+      "total_lines": 22386,
       "lang_lines": {
-        "Python": 22370
+        "Python": 22386
       }
     },
     "Arvo-Devs/onlysearch": {

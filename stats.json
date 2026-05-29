@@ -1,12 +1,12 @@
 {
   "total_repos_analyzed": 48,
-  "total_lines_added": 815588,
-  "total_commits": 1406,
+  "total_lines_added": 816648,
+  "total_commits": 1414,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 606168,
-      "percentage": 74.3,
+      "lines_added": 607228,
+      "percentage": 74.4,
       "color": "#3178c6"
     },
     {
@@ -168,11 +168,11 @@
       }
     },
     "Taskiry/api": {
-      "last_sha": "cdb0da817c762d9db791ba92dbddb3127eeba74a",
-      "total_commits": 8,
-      "total_lines": 4055,
+      "last_sha": "0657c2dcb4605061d083b3069bd236d0ff183fb9",
+      "total_commits": 9,
+      "total_lines": 4088,
       "lang_lines": {
-        "TypeScript": 3789,
+        "TypeScript": 3822,
         "SQL": 266
       }
     },
@@ -185,11 +185,11 @@
       }
     },
     "Taskiry/app": {
-      "last_sha": "bd3105e257109cc753f24e26ae4ec26088bf8380",
-      "total_commits": 27,
-      "total_lines": 40152,
+      "last_sha": "2b4be241578d2fd0cca0e3528d47784650d41dc6",
+      "total_commits": 34,
+      "total_lines": 41179,
       "lang_lines": {
-        "TypeScript": 40152
+        "TypeScript": 41179
       }
     },
     "icetrahan/skin-creator-app": {

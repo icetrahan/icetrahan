@@ -1,24 +1,24 @@
 {
   "total_repos_analyzed": 49,
-  "total_lines_added": 926089,
-  "total_commits": 1648,
+  "total_lines_added": 930120,
+  "total_commits": 1651,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 713388,
+      "lines_added": 716528,
       "percentage": 77.0,
       "color": "#3178c6"
     },
     {
       "name": "Python",
       "lines_added": 131440,
-      "percentage": 14.2,
+      "percentage": 14.1,
       "color": "#3572A5"
     },
     {
       "name": "Dart",
       "lines_added": 47826,
-      "percentage": 5.2,
+      "percentage": 5.1,
       "color": "#00B4AB"
     },
     {
@@ -29,8 +29,8 @@
     },
     {
       "name": "SQL",
-      "lines_added": 5201,
-      "percentage": 0.6,
+      "lines_added": 6092,
+      "percentage": 0.7,
       "color": "#e38c00"
     },
     {
@@ -484,11 +484,12 @@
       }
     },
     "icetrahan/primal-v2": {
-      "last_sha": "60c90bb38de5c54d10ca065e4c1bb138ca30ce44",
-      "total_commits": 10,
-      "total_lines": 8412,
+      "last_sha": "ed7f398f335190f487efa1da5d3bde6be6f19e9d",
+      "total_commits": 13,
+      "total_lines": 12443,
       "lang_lines": {
-        "TypeScript": 8412
+        "TypeScript": 11552,
+        "SQL": 891
       }
     }
   }

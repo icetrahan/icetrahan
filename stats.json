@@ -1,18 +1,18 @@
 {
   "total_repos_analyzed": 49,
-  "total_lines_added": 933521,
-  "total_commits": 1674,
+  "total_lines_added": 940172,
+  "total_commits": 1699,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 719828,
-      "percentage": 77.1,
+      "lines_added": 724194,
+      "percentage": 77.0,
       "color": "#3178c6"
     },
     {
       "name": "Python",
       "lines_added": 131488,
-      "percentage": 14.1,
+      "percentage": 14.0,
       "color": "#3572A5"
     },
     {
@@ -23,13 +23,13 @@
     },
     {
       "name": "JavaScript",
-      "lines_added": 20406,
-      "percentage": 2.2,
+      "lines_added": 22689,
+      "percentage": 2.4,
       "color": "#f1e05a"
     },
     {
       "name": "SQL",
-      "lines_added": 6145,
+      "lines_added": 6147,
       "percentage": 0.7,
       "color": "#e38c00"
     },
@@ -185,8 +185,8 @@
       }
     },
     "Taskiry/app": {
-      "last_sha": "9a2bb41c9eb17d69840d15d54dcadb4b9b2a91b3",
-      "total_commits": 48,
+      "last_sha": "cf9a5acf1dc8d3ea3eb0987c218786a8640f75f1",
+      "total_commits": 49,
       "total_lines": 50983,
       "lang_lines": {
         "TypeScript": 50983
@@ -474,13 +474,13 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "6401d1c8c45e07b0783bfe498df8e93a1721ab5d",
-      "total_commits": 141,
-      "total_lines": 98693,
+      "last_sha": "0d8427dc217bf9b15077ab3a56317b0c6e757e49",
+      "total_commits": 165,
+      "total_lines": 105344,
       "lang_lines": {
-        "TypeScript": 92387,
-        "JavaScript": 6034,
-        "SQL": 272
+        "TypeScript": 96753,
+        "JavaScript": 8317,
+        "SQL": 274
       }
     },
     "icetrahan/primal-v2": {

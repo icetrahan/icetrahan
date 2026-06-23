@@ -1,36 +1,36 @@
 {
   "total_repos_analyzed": 49,
-  "total_lines_added": 940172,
-  "total_commits": 1702,
+  "total_lines_added": 947157,
+  "total_commits": 1704,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 724194,
-      "percentage": 77.0,
+      "lines_added": 724388,
+      "percentage": 76.5,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 131488,
-      "percentage": 14.0,
+      "lines_added": 131947,
+      "percentage": 13.9,
       "color": "#3572A5"
     },
     {
       "name": "Dart",
       "lines_added": 47826,
-      "percentage": 5.1,
+      "percentage": 5.0,
       "color": "#00B4AB"
     },
     {
       "name": "JavaScript",
-      "lines_added": 22689,
-      "percentage": 2.4,
+      "lines_added": 29021,
+      "percentage": 3.1,
       "color": "#f1e05a"
     },
     {
       "name": "SQL",
       "lines_added": 6147,
-      "percentage": 0.7,
+      "percentage": 0.6,
       "color": "#e38c00"
     },
     {
@@ -185,11 +185,11 @@
       }
     },
     "Taskiry/app": {
-      "last_sha": "cf9a5acf1dc8d3ea3eb0987c218786a8640f75f1",
-      "total_commits": 49,
-      "total_lines": 50983,
+      "last_sha": "acf0fcd505e107207047741c3a2403ba2576352d",
+      "total_commits": 50,
+      "total_lines": 50994,
       "lang_lines": {
-        "TypeScript": 50983
+        "TypeScript": 50994
       }
     },
     "icetrahan/skin-creator-app": {
@@ -484,12 +484,14 @@
       }
     },
     "icetrahan/primal-v2": {
-      "last_sha": "b3e5b2fb53d1c5322825f9b2d2371b8b4c062a11",
-      "total_commits": 15,
-      "total_lines": 14225,
+      "last_sha": "37eb75207011a23c20ce1ab0e7d66fec2a214d77",
+      "total_commits": 16,
+      "total_lines": 21199,
       "lang_lines": {
-        "TypeScript": 13281,
-        "SQL": 944
+        "TypeScript": 13464,
+        "SQL": 944,
+        "JavaScript": 6332,
+        "Python": 459
       }
     }
   }

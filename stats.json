@@ -1,12 +1,12 @@
 {
-  "total_repos_analyzed": 49,
-  "total_lines_added": 954162,
-  "total_commits": 1724,
+  "total_repos_analyzed": 50,
+  "total_lines_added": 955741,
+  "total_commits": 1726,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 729381,
-      "percentage": 76.4,
+      "lines_added": 730894,
+      "percentage": 76.5,
       "color": "#3178c6"
     },
     {
@@ -23,7 +23,7 @@
     },
     {
       "name": "JavaScript",
-      "lines_added": 30443,
+      "lines_added": 30509,
       "percentage": 3.2,
       "color": "#f1e05a"
     },
@@ -185,11 +185,11 @@
       }
     },
     "Taskiry/app": {
-      "last_sha": "67c7eda71a2a2ecf3951dd95def88e2dab51757d",
-      "total_commits": 54,
-      "total_lines": 53325,
+      "last_sha": "aaf440b8f2d9e3949a9a10bfd31f6f43f92a867b",
+      "total_commits": 55,
+      "total_lines": 53588,
       "lang_lines": {
-        "TypeScript": 53325
+        "TypeScript": 53588
       }
     },
     "icetrahan/skin-creator-app": {
@@ -492,6 +492,15 @@
         "SQL": 1044,
         "JavaScript": 7754,
         "Python": 840
+      }
+    },
+    "icetrahan/icecode-portfolio": {
+      "last_sha": "10a052685cdc9937e6c0682e603c6307a3af074e",
+      "total_commits": 1,
+      "total_lines": 1316,
+      "lang_lines": {
+        "JavaScript": 66,
+        "TypeScript": 1250
       }
     }
   }

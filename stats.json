@@ -1,35 +1,35 @@
 {
   "total_repos_analyzed": 50,
-  "total_lines_added": 956160,
-  "total_commits": 1734,
+  "total_lines_added": 980366,
+  "total_commits": 1737,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 731253,
-      "percentage": 76.5,
+      "lines_added": 744162,
+      "percentage": 75.9,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 132398,
-      "percentage": 13.8,
+      "lines_added": 132553,
+      "percentage": 13.5,
       "color": "#3572A5"
     },
     {
       "name": "Dart",
       "lines_added": 47826,
-      "percentage": 5.0,
+      "percentage": 4.9,
       "color": "#00B4AB"
     },
     {
       "name": "JavaScript",
-      "lines_added": 30509,
-      "percentage": 3.2,
+      "lines_added": 41581,
+      "percentage": 4.2,
       "color": "#f1e05a"
     },
     {
       "name": "SQL",
-      "lines_added": 6346,
+      "lines_added": 6416,
       "percentage": 0.7,
       "color": "#e38c00"
     },
@@ -152,11 +152,11 @@
       }
     },
     "icetrahan/primal-discord": {
-      "last_sha": "6e5bcd1abb539aeae8fd581d5f77f6708ae09a50",
-      "total_commits": 21,
-      "total_lines": 23059,
+      "last_sha": "3702f2416271b83d35afb70050f7b7edc27631a6",
+      "total_commits": 22,
+      "total_lines": 23130,
       "lang_lines": {
-        "Python": 23059
+        "Python": 23130
       }
     },
     "Arvo-Devs/onlysearch": {
@@ -201,11 +201,11 @@
       }
     },
     "icetrahan/primal-tickets": {
-      "last_sha": "328d58c4b5ca933f2baf9c667162a4ac6a9ddc0c",
-      "total_commits": 3,
-      "total_lines": 455,
+      "last_sha": "36969fe23233c570fcf0b4de8414fbac16cbd865",
+      "total_commits": 4,
+      "total_lines": 480,
       "lang_lines": {
-        "Python": 455
+        "Python": 480
       }
     },
     "icetrahan/primal-patcher": {
@@ -484,14 +484,14 @@
       }
     },
     "icetrahan/primal-v2": {
-      "last_sha": "d52840acea2914981d7ce837a2e86a75a11bd644",
-      "total_commits": 19,
-      "total_lines": 25727,
+      "last_sha": "38eff85854cfcb0e86255ffcc76581973817e365",
+      "total_commits": 20,
+      "total_lines": 49837,
       "lang_lines": {
-        "TypeScript": 16029,
-        "SQL": 1104,
-        "JavaScript": 7754,
-        "Python": 840
+        "TypeScript": 28938,
+        "SQL": 1174,
+        "JavaScript": 18826,
+        "Python": 899
       }
     },
     "icetrahan/icecode-portfolio": {

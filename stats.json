@@ -1,12 +1,12 @@
 {
   "total_repos_analyzed": 51,
-  "total_lines_added": 995908,
-  "total_commits": 1793,
+  "total_lines_added": 1000477,
+  "total_commits": 1804,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 751838,
-      "percentage": 75.5,
+      "lines_added": 752913,
+      "percentage": 75.3,
       "color": "#3178c6"
     },
     {
@@ -16,16 +16,16 @@
       "color": "#3572A5"
     },
     {
+      "name": "JavaScript",
+      "lines_added": 48177,
+      "percentage": 4.8,
+      "color": "#f1e05a"
+    },
+    {
       "name": "Dart",
       "lines_added": 47826,
       "percentage": 4.8,
       "color": "#00B4AB"
-    },
-    {
-      "name": "JavaScript",
-      "lines_added": 44912,
-      "percentage": 4.5,
-      "color": "#f1e05a"
     },
     {
       "name": "SQL",
@@ -35,7 +35,7 @@
     },
     {
       "name": "Shell",
-      "lines_added": 3756,
+      "lines_added": 3985,
       "percentage": 0.4,
       "color": "#89e051"
     },
@@ -234,11 +234,11 @@
       }
     },
     "icetrahan/PTEggos": {
-      "last_sha": "1f6047cc95d49941138b3299145fee04056ed58c",
-      "total_commits": 86,
-      "total_lines": 3266,
+      "last_sha": "23b6a27677dc9211182a723358685995715853cc",
+      "total_commits": 88,
+      "total_lines": 3495,
       "lang_lines": {
-        "Shell": 2996,
+        "Shell": 3225,
         "Python": 270
       }
     },
@@ -474,23 +474,23 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "8d55b473700b122ba0fb898bd593536eaee503b8",
-      "total_commits": 175,
-      "total_lines": 108527,
+      "last_sha": "99b7746217085b62e6c763ddae8eb4c78faf1506",
+      "total_commits": 183,
+      "total_lines": 109595,
       "lang_lines": {
-        "TypeScript": 99906,
+        "TypeScript": 100974,
         "JavaScript": 8317,
         "SQL": 304
       }
     },
     "icetrahan/primal-v2": {
-      "last_sha": "2c066576f9a12e96767c4d918e4eae9cdd6ed5a4",
-      "total_commits": 27,
-      "total_lines": 59045,
+      "last_sha": "0e30881dc04893488a5b80f7b84016591ea4a39d",
+      "total_commits": 28,
+      "total_lines": 62317,
       "lang_lines": {
-        "TypeScript": 33163,
+        "TypeScript": 33170,
         "SQL": 2820,
-        "JavaScript": 22157,
+        "JavaScript": 25422,
         "Python": 905
       }
     },

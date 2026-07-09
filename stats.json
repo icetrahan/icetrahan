@@ -1,12 +1,12 @@
 {
   "total_repos_analyzed": 70,
-  "total_lines_added": 1312660,
-  "total_commits": 2083,
+  "total_lines_added": 1313421,
+  "total_commits": 2088,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 931196,
-      "percentage": 70.9,
+      "lines_added": 931881,
+      "percentage": 71.0,
       "color": "#3178c6"
     },
     {
@@ -17,7 +17,7 @@
     },
     {
       "name": "JavaScript",
-      "lines_added": 52634,
+      "lines_added": 52658,
       "percentage": 4.0,
       "color": "#f1e05a"
     },
@@ -29,8 +29,8 @@
     },
     {
       "name": "SQL",
-      "lines_added": 9843,
-      "percentage": 0.7,
+      "lines_added": 9895,
+      "percentage": 0.8,
       "color": "#e38c00"
     },
     {
@@ -74,11 +74,11 @@
       }
     },
     "icetrahan/primal-overlay": {
-      "last_sha": "4248b35b529cf878c6af93cd9537b8731082ed65",
-      "total_commits": 11,
-      "total_lines": 11255,
+      "last_sha": "89e0ff38c28f170e68b9fe0cdde6c90a75cbc470",
+      "total_commits": 12,
+      "total_lines": 11265,
       "lang_lines": {
-        "JavaScript": 11255
+        "JavaScript": 11265
       }
     },
     "Arvo-OFM/ofmanager-api": {
@@ -484,13 +484,13 @@
       }
     },
     "icetrahan/primal-v2": {
-      "last_sha": "10179aaed4aaddb774a8957bb1fc939377013e1c",
-      "total_commits": 35,
-      "total_lines": 69104,
+      "last_sha": "0f6e5e224f5275b4d268771ffd106181fb751dd8",
+      "total_commits": 36,
+      "total_lines": 69146,
       "lang_lines": {
-        "TypeScript": 36782,
+        "TypeScript": 36810,
         "SQL": 2929,
-        "JavaScript": 28488,
+        "JavaScript": 28502,
         "Python": 905
       }
     },
@@ -654,12 +654,12 @@
       "lang_lines": {}
     },
     "icetrahan/primal-hosted-api": {
-      "last_sha": "5cd9717defab76f77f8cdd73e1dfc270b6bf9ff2",
-      "total_commits": 5,
-      "total_lines": 802,
+      "last_sha": "cf4dd5425162f84e0b7a89164239b4882609f6ad",
+      "total_commits": 8,
+      "total_lines": 1511,
       "lang_lines": {
-        "SQL": 117,
-        "TypeScript": 685
+        "SQL": 169,
+        "TypeScript": 1342
       }
     },
     "icetrahan/primal-tenant-web": {

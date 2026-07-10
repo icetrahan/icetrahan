@@ -1,18 +1,18 @@
 {
   "total_repos_analyzed": 71,
-  "total_lines_added": 1322563,
-  "total_commits": 2146,
+  "total_lines_added": 1327875,
+  "total_commits": 2163,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 939626,
+      "lines_added": 942701,
       "percentage": 71.0,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 263349,
-      "percentage": 19.9,
+      "lines_added": 265359,
+      "percentage": 20.0,
       "color": "#3572A5"
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 10145,
+      "lines_added": 10372,
       "percentage": 0.8,
       "color": "#e38c00"
     },
@@ -474,13 +474,13 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "f9dea134c9b4ef37a08671e43bfc59d6a174b1dd",
-      "total_commits": 264,
-      "total_lines": 148045,
+      "last_sha": "6d8dd6f741e78a209dc8ffadb1bdc80de5de106d",
+      "total_commits": 272,
+      "total_lines": 150070,
       "lang_lines": {
-        "TypeScript": 139208,
+        "TypeScript": 141034,
         "JavaScript": 8317,
-        "SQL": 520
+        "SQL": 719
       }
     },
     "icetrahan/primal-v2": {
@@ -514,12 +514,12 @@
       }
     },
     "icetrahan/primal-billing": {
-      "last_sha": "ec2d9bae69ea027065d50eb22e1e4cad9e2da3a4",
-      "total_commits": 50,
-      "total_lines": 12404,
+      "last_sha": "6c2a122b0f0025b7bcc57688a0095caa250d1d51",
+      "total_commits": 55,
+      "total_lines": 13681,
       "lang_lines": {
-        "TypeScript": 11831,
-        "SQL": 322,
+        "TypeScript": 13080,
+        "SQL": 350,
         "JavaScript": 251
       }
     },
@@ -671,11 +671,11 @@
       }
     },
     "icetrahan/primal-hosted-bot": {
-      "last_sha": "66116e31c4138d104b87fc73b84db25a269a3f3a",
-      "total_commits": 14,
-      "total_lines": 3479,
+      "last_sha": "1685869040272cb511179335ee9b795f12d595dc",
+      "total_commits": 18,
+      "total_lines": 5489,
       "lang_lines": {
-        "Python": 3479
+        "Python": 5489
       }
     },
     "icetrahan/primal-hosted-data": {

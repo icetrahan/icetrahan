@@ -1,11 +1,11 @@
 {
   "total_repos_analyzed": 72,
-  "total_lines_added": 1386084,
-  "total_commits": 2340,
+  "total_lines_added": 1386308,
+  "total_commits": 2342,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 997431,
+      "lines_added": 997599,
       "percentage": 72.0,
       "color": "#3178c6"
     },
@@ -24,7 +24,7 @@
     {
       "name": "Dart",
       "lines_added": 47826,
-      "percentage": 3.5,
+      "percentage": 3.4,
       "color": "#00B4AB"
     },
     {
@@ -35,7 +35,7 @@
     },
     {
       "name": "Shell",
-      "lines_added": 6246,
+      "lines_added": 6302,
       "percentage": 0.5,
       "color": "#89e051"
     },
@@ -209,12 +209,12 @@
       }
     },
     "icetrahan/primal-patcher": {
-      "last_sha": "48b8a63735974e051532c6443716ca398d893e6b",
-      "total_commits": 6,
-      "total_lines": 1160,
+      "last_sha": "fe0b96cb0f464f24c742fa0db869c1257368917f",
+      "total_commits": 7,
+      "total_lines": 1216,
       "lang_lines": {
         "Python": 400,
-        "Shell": 760
+        "Shell": 816
       }
     },
     "icetrahan/primal-deathmatch-external": {
@@ -524,11 +524,11 @@
       }
     },
     "icetrahan/primal-deathmatch-ts": {
-      "last_sha": "fe43e186c7268ed11600c12bfe493718f5435d7c",
-      "total_commits": 5,
-      "total_lines": 16924,
+      "last_sha": "0038b44ce2a84a23525a345193bc8c43f7570677",
+      "total_commits": 6,
+      "total_lines": 17092,
       "lang_lines": {
-        "TypeScript": 16659,
+        "TypeScript": 16827,
         "Python": 265
       }
     },

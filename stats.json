@@ -1,18 +1,18 @@
 {
-  "total_repos_analyzed": 74,
-  "total_lines_added": 1392166,
-  "total_commits": 2366,
+  "total_repos_analyzed": 79,
+  "total_lines_added": 1415277,
+  "total_commits": 2381,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 998021,
-      "percentage": 71.7,
+      "lines_added": 999988,
+      "percentage": 70.7,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 265463,
-      "percentage": 19.1,
+      "lines_added": 271753,
+      "percentage": 19.2,
       "color": "#3572A5"
     },
     {
@@ -28,22 +28,28 @@
       "color": "#00B4AB"
     },
     {
+      "name": "C++",
+      "lines_added": 14505,
+      "percentage": 1.0,
+      "color": "#f34b7d"
+    },
+    {
       "name": "SQL",
-      "lines_added": 11130,
+      "lines_added": 11148,
       "percentage": 0.8,
       "color": "#e38c00"
     },
     {
       "name": "Shell",
       "lines_added": 6355,
-      "percentage": 0.5,
+      "percentage": 0.4,
       "color": "#89e051"
     },
     {
-      "name": "C++",
-      "lines_added": 4129,
+      "name": "C",
+      "lines_added": 4466,
       "percentage": 0.3,
-      "color": "#f34b7d"
+      "color": "#555555"
     },
     {
       "name": "Swift",
@@ -56,12 +62,6 @@
       "lines_added": 149,
       "percentage": 0.0,
       "color": "#dea584"
-    },
-    {
-      "name": "Kotlin",
-      "lines_added": 36,
-      "percentage": 0.0,
-      "color": "#A97BFF"
     }
   ],
   "_cache": {
@@ -679,12 +679,12 @@
       }
     },
     "icetrahan/primal-hosted-data": {
-      "last_sha": "b007ca8fc689413d8717d6e057318eee9f4032dd",
-      "total_commits": 64,
-      "total_lines": 13246,
+      "last_sha": "07a81f51d1870080933cb71dad20708d0f00515a",
+      "total_commits": 67,
+      "total_lines": 15231,
       "lang_lines": {
-        "TypeScript": 10887,
-        "SQL": 891,
+        "TypeScript": 12854,
+        "SQL": 909,
         "Shell": 1468
       }
     },
@@ -712,6 +712,49 @@
       "lang_lines": {
         "C++": 507,
         "Python": 80
+      }
+    },
+    "icetrahan/primal-everything-meta": {
+      "last_sha": "6607d35f71d25869f24e14ef91529817f9b4549b",
+      "total_commits": 7,
+      "total_lines": 1562,
+      "lang_lines": {
+        "Python": 1562
+      }
+    },
+    "icetrahan/isle-mod-legacy": {
+      "last_sha": "0934cd8947d64a636c4c4fa27c6c96c107fb2005",
+      "total_commits": 2,
+      "total_lines": 5034,
+      "lang_lines": {
+        "C++": 2729,
+        "Python": 75,
+        "C": 2230
+      }
+    },
+    "icetrahan/isle-mod-evrima": {
+      "last_sha": "4fc28573214e6ab5451a074ea07e9fd3886bda6c",
+      "total_commits": 1,
+      "total_lines": 9877,
+      "lang_lines": {
+        "C++": 7647,
+        "C": 2230
+      }
+    },
+    "icetrahan/primal-middleware": {
+      "last_sha": "1ee2320960ec4aaa4702ea40ee5d3d36e632bb3d",
+      "total_commits": 1,
+      "total_lines": 1872,
+      "lang_lines": {
+        "Python": 1872
+      }
+    },
+    "icetrahan/isle-adapter": {
+      "last_sha": "14c1c2994e8b71e6931d0454decd4e2e129fd34a",
+      "total_commits": 1,
+      "total_lines": 2781,
+      "lang_lines": {
+        "Python": 2781
       }
     }
   }

@@ -1,11 +1,11 @@
 {
   "total_repos_analyzed": 79,
-  "total_lines_added": 1422977,
-  "total_commits": 2429,
+  "total_lines_added": 1425269,
+  "total_commits": 2434,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 1007551,
+      "lines_added": 1009732,
       "percentage": 70.8,
       "color": "#3178c6"
     },
@@ -29,13 +29,13 @@
     },
     {
       "name": "C++",
-      "lines_added": 14626,
+      "lines_added": 14689,
       "percentage": 1.0,
       "color": "#f34b7d"
     },
     {
       "name": "SQL",
-      "lines_added": 11164,
+      "lines_added": 11212,
       "percentage": 0.8,
       "color": "#e38c00"
     },
@@ -474,13 +474,13 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "acff7c8716d4a76221553a7094e1dceb619062b9",
-      "total_commits": 322,
-      "total_lines": 165892,
+      "last_sha": "7df8fdd4f964e25e70cce06c7258db035c8182e9",
+      "total_commits": 325,
+      "total_lines": 168121,
       "lang_lines": {
-        "TypeScript": 156823,
+        "TypeScript": 159004,
         "JavaScript": 8317,
-        "SQL": 752
+        "SQL": 800
       }
     },
     "icetrahan/primal-v2": {
@@ -723,11 +723,11 @@
       }
     },
     "icetrahan/isle-mod-legacy": {
-      "last_sha": "b689b5bbb62004819ec38d4a6a7fb452d8a17f97",
-      "total_commits": 6,
-      "total_lines": 5155,
+      "last_sha": "a858631d2169db9ae2db8dda80c6faead31ee742",
+      "total_commits": 8,
+      "total_lines": 5218,
       "lang_lines": {
-        "C++": 2850,
+        "C++": 2913,
         "Python": 75,
         "C": 2230
       }

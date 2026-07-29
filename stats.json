@@ -1,24 +1,24 @@
 {
   "total_repos_analyzed": 81,
-  "total_lines_added": 1475745,
-  "total_commits": 2893,
+  "total_lines_added": 1485941,
+  "total_commits": 2966,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 1050944,
-      "percentage": 71.2,
+      "lines_added": 1060169,
+      "percentage": 71.3,
       "color": "#3178c6"
     },
     {
       "name": "Python",
       "lines_added": 275635,
-      "percentage": 18.7,
+      "percentage": 18.6,
       "color": "#3572A5"
     },
     {
       "name": "JavaScript",
-      "lines_added": 61013,
-      "percentage": 4.1,
+      "lines_added": 61984,
+      "percentage": 4.2,
       "color": "#f1e05a"
     },
     {
@@ -168,13 +168,14 @@
       }
     },
     "Taskiry/api": {
-      "last_sha": "97c6cfdb4e3d43f29c66e3a6c18bbb1c48bc97df",
-      "total_commits": 32,
-      "total_lines": 11452,
+      "last_sha": "1cfa3b96ece3c11c8f6a31c1d53396b475a3cfda",
+      "total_commits": 33,
+      "total_lines": 12580,
       "lang_lines": {
-        "TypeScript": 10676,
+        "TypeScript": 11195,
         "SQL": 578,
-        "Shell": 198
+        "Shell": 198,
+        "JavaScript": 609
       }
     },
     "icetrahan/primal-skins": {
@@ -186,12 +187,12 @@
       }
     },
     "Taskiry/app": {
-      "last_sha": "9ffa22a72c8bd4caa317c6ccb2e69ddb9cf3bd0a",
-      "total_commits": 63,
-      "total_lines": 56789,
+      "last_sha": "2517962a7ce46b693deafac71f923c82b1d5e0e4",
+      "total_commits": 65,
+      "total_lines": 59863,
       "lang_lines": {
-        "TypeScript": 55178,
-        "JavaScript": 1611
+        "TypeScript": 57890,
+        "JavaScript": 1973
       }
     },
     "icetrahan/skin-creator-app": {
@@ -476,11 +477,11 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "d6887b3e69b34422addda6d9b40d0fb26af1f118",
-      "total_commits": 453,
-      "total_lines": 190118,
+      "last_sha": "64f00f095e5a2b867f57a9aa0865c27d369a7e24",
+      "total_commits": 512,
+      "total_lines": 196112,
       "lang_lines": {
-        "TypeScript": 180983,
+        "TypeScript": 186977,
         "JavaScript": 8317,
         "SQL": 818
       }
@@ -718,8 +719,8 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "0165fce52d4d91f21b754cec6aa8bff3719d3e40",
-      "total_commits": 179,
+      "last_sha": "2e3639df06ab0ae720d742d91ef29c74fc13edec",
+      "total_commits": 190,
       "total_lines": 3144,
       "lang_lines": {
         "Python": 3144

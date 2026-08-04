@@ -1,24 +1,24 @@
 {
   "total_repos_analyzed": 81,
-  "total_lines_added": 1522258,
-  "total_commits": 3221,
+  "total_lines_added": 1536175,
+  "total_commits": 3274,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 1085414,
-      "percentage": 71.3,
+      "lines_added": 1099227,
+      "percentage": 71.6,
       "color": "#3178c6"
     },
     {
       "name": "Python",
       "lines_added": 280011,
-      "percentage": 18.4,
+      "percentage": 18.2,
       "color": "#3572A5"
     },
     {
       "name": "JavaScript",
       "lines_added": 67947,
-      "percentage": 4.5,
+      "percentage": 4.4,
       "color": "#f1e05a"
     },
     {
@@ -41,7 +41,7 @@
     },
     {
       "name": "Shell",
-      "lines_added": 7068,
+      "lines_added": 7172,
       "percentage": 0.5,
       "color": "#89e051"
     },
@@ -477,11 +477,11 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "e2274a1e0a96d30bcfa0f8f0f9a4e669a5c033bd",
-      "total_commits": 579,
-      "total_lines": 198950,
+      "last_sha": "98e1b3097a2e8c7837642df7ba849de7d5fb104e",
+      "total_commits": 614,
+      "total_lines": 211831,
       "lang_lines": {
-        "TypeScript": 189356,
+        "TypeScript": 202237,
         "JavaScript": 8317,
         "SQL": 950,
         "Shell": 327
@@ -683,13 +683,13 @@
       }
     },
     "icetrahan/primal-hosted-data": {
-      "last_sha": "f91fe8c298695594f08f986ad042011e2df3361c",
-      "total_commits": 141,
-      "total_lines": 24350,
+      "last_sha": "00dbc69edd8df7aa9ffd92142de6eefafa260fb4",
+      "total_commits": 146,
+      "total_lines": 25386,
       "lang_lines": {
-        "TypeScript": 21335,
+        "TypeScript": 22267,
         "SQL": 1359,
-        "Shell": 1656
+        "Shell": 1760
       }
     },
     "icetrahan/primal-voice-launcher": {
@@ -720,8 +720,8 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "4f1e393ead36ac6d561dce33b20dcbb627833a20",
-      "total_commits": 286,
+      "last_sha": "d1d1bd0f943fb357e9a180764bab74cc60470378",
+      "total_commits": 299,
       "total_lines": 4424,
       "lang_lines": {
         "Python": 4424

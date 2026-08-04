@@ -1,11 +1,11 @@
 {
   "total_repos_analyzed": 81,
-  "total_lines_added": 1536175,
-  "total_commits": 3281,
+  "total_lines_added": 1536296,
+  "total_commits": 3297,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 1099227,
+      "lines_added": 1099275,
       "percentage": 71.6,
       "color": "#3178c6"
     },
@@ -17,7 +17,7 @@
     },
     {
       "name": "JavaScript",
-      "lines_added": 67947,
+      "lines_added": 67964,
       "percentage": 4.4,
       "color": "#f1e05a"
     },
@@ -41,7 +41,7 @@
     },
     {
       "name": "Shell",
-      "lines_added": 7172,
+      "lines_added": 7228,
       "percentage": 0.5,
       "color": "#89e051"
     },
@@ -488,13 +488,13 @@
       }
     },
     "icetrahan/primal-v2": {
-      "last_sha": "fc823f46076c13082c41da0304aa5e8f18d38758",
-      "total_commits": 49,
-      "total_lines": 74806,
+      "last_sha": "3f4aa9fd9034ab626c0fbcfd01d03683083019a6",
+      "total_commits": 53,
+      "total_lines": 74855,
       "lang_lines": {
-        "TypeScript": 41718,
+        "TypeScript": 41750,
         "SQL": 2965,
-        "JavaScript": 29218,
+        "JavaScript": 29235,
         "Python": 905
       }
     },
@@ -537,11 +537,11 @@
       }
     },
     "icetrahan/primal-web2": {
-      "last_sha": "2f7f782af21e72520052ffd05e00680d15dca0d5",
-      "total_commits": 9,
-      "total_lines": 47380,
+      "last_sha": "a2f7b8a17a15d17dbca68e6caa70b83b59e44806",
+      "total_commits": 12,
+      "total_lines": 47396,
       "lang_lines": {
-        "TypeScript": 47088,
+        "TypeScript": 47104,
         "Shell": 26,
         "JavaScript": 266
       }
@@ -720,11 +720,12 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "bb50478f2a4615b13572665b9253d8a5a6a39e85",
-      "total_commits": 303,
-      "total_lines": 4424,
+      "last_sha": "e1e580dea64f83d3ed676df0494c1259c4d72904",
+      "total_commits": 312,
+      "total_lines": 4480,
       "lang_lines": {
-        "Python": 4424
+        "Python": 4424,
+        "Shell": 56
       }
     },
     "icetrahan/isle-mod-legacy": {

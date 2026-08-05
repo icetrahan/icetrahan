@@ -1,18 +1,18 @@
 {
-  "total_repos_analyzed": 81,
-  "total_lines_added": 1536296,
-  "total_commits": 3298,
+  "total_repos_analyzed": 82,
+  "total_lines_added": 1556272,
+  "total_commits": 3342,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 1099275,
-      "percentage": 71.6,
+      "lines_added": 1119046,
+      "percentage": 71.9,
       "color": "#3178c6"
     },
     {
       "name": "Python",
       "lines_added": 280011,
-      "percentage": 18.2,
+      "percentage": 18.0,
       "color": "#3572A5"
     },
     {
@@ -35,7 +35,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 12282,
+      "lines_added": 12487,
       "percentage": 0.8,
       "color": "#e38c00"
     },
@@ -477,11 +477,11 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "98e1b3097a2e8c7837642df7ba849de7d5fb104e",
-      "total_commits": 614,
-      "total_lines": 211831,
+      "last_sha": "2f5d7cb48e6fdff6e12ce5c36e1da3e2ce212f6c",
+      "total_commits": 645,
+      "total_lines": 227383,
       "lang_lines": {
-        "TypeScript": 202237,
+        "TypeScript": 217789,
         "JavaScript": 8317,
         "SQL": 950,
         "Shell": 327
@@ -528,11 +528,11 @@
       }
     },
     "icetrahan/primal-deathmatch-ts": {
-      "last_sha": "07366a5993f097d489637f1e0e0aa459e6a7663e",
-      "total_commits": 9,
-      "total_lines": 17146,
+      "last_sha": "75748736aac36311a2a6740b59dceb59fa72e293",
+      "total_commits": 12,
+      "total_lines": 18549,
       "lang_lines": {
-        "TypeScript": 16881,
+        "TypeScript": 18284,
         "Python": 265
       }
     },
@@ -720,8 +720,8 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "e1e580dea64f83d3ed676df0494c1259c4d72904",
-      "total_commits": 312,
+      "last_sha": "5b90389179f695e844ee9c7e95eda7a7258cac3e",
+      "total_commits": 313,
       "total_lines": 4480,
       "lang_lines": {
         "Python": 4424,
@@ -779,6 +779,15 @@
       "total_lines": 1824,
       "lang_lines": {
         "TypeScript": 1824
+      }
+    },
+    "Arvo-Devs/modelapps": {
+      "last_sha": "f34b6eb24dfe61a9ddcd344a486fb44825c0e326",
+      "total_commits": 9,
+      "total_lines": 3021,
+      "lang_lines": {
+        "TypeScript": 2816,
+        "SQL": 205
       }
     }
   }

@@ -1,7 +1,7 @@
 {
   "total_repos_analyzed": 84,
-  "total_lines_added": 1637900,
-  "total_commits": 3732,
+  "total_lines_added": 1638343,
+  "total_commits": 3736,
   "languages": [
     {
       "name": "TypeScript",
@@ -11,7 +11,7 @@
     },
     {
       "name": "Python",
-      "lines_added": 283016,
+      "lines_added": 283139,
       "percentage": 17.3,
       "color": "#3572A5"
     },
@@ -58,10 +58,10 @@
       "color": "#F05138"
     },
     {
-      "name": "Rust",
-      "lines_added": 149,
+      "name": "C#",
+      "lines_added": 218,
       "percentage": 0.0,
-      "color": "#dea584"
+      "color": "#178600"
     }
   ],
   "_cache": {
@@ -720,13 +720,15 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "5062292f940b601d65602dd660c181b442950eee",
-      "total_commits": 490,
-      "total_lines": 5458,
+      "last_sha": "e650153daf42b1868fce81e54baa85dfb38d4e8c",
+      "total_commits": 494,
+      "total_lines": 5901,
       "lang_lines": {
-        "Python": 4445,
+        "Python": 4568,
         "Shell": 56,
-        "JavaScript": 957
+        "JavaScript": 957,
+        "Lua": 134,
+        "C#": 186
       }
     },
     "icetrahan/isle-mod-legacy": {

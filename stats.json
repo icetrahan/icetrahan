@@ -1,17 +1,17 @@
 {
-  "total_repos_analyzed": 84,
-  "total_lines_added": 1638343,
-  "total_commits": 3737,
+  "total_repos_analyzed": 85,
+  "total_lines_added": 1639574,
+  "total_commits": 3748,
   "languages": [
     {
       "name": "TypeScript",
       "lines_added": 1167139,
-      "percentage": 71.3,
+      "percentage": 71.2,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 283139,
+      "lines_added": 284340,
       "percentage": 17.3,
       "color": "#3572A5"
     },
@@ -29,7 +29,7 @@
     },
     {
       "name": "C++",
-      "lines_added": 17034,
+      "lines_added": 17064,
       "percentage": 1.0,
       "color": "#f34b7d"
     },
@@ -720,8 +720,8 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "e650153daf42b1868fce81e54baa85dfb38d4e8c",
-      "total_commits": 494,
+      "last_sha": "187cc46076bac76b9cfa256d86b830db1944c15d",
+      "total_commits": 500,
       "total_lines": 5901,
       "lang_lines": {
         "Python": 4568,
@@ -806,6 +806,15 @@
       "total_lines": 195,
       "lang_lines": {
         "TypeScript": 195
+      }
+    },
+    "icetrahan/isle-mod-project": {
+      "last_sha": "b31687671e7c962cfd2fae1823805b880b6e08e9",
+      "total_commits": 5,
+      "total_lines": 1231,
+      "lang_lines": {
+        "Python": 1201,
+        "C++": 30
       }
     }
   }

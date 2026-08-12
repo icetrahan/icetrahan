@@ -1,12 +1,12 @@
 {
   "total_repos_analyzed": 85,
-  "total_lines_added": 1684081,
-  "total_commits": 3951,
+  "total_lines_added": 1685005,
+  "total_commits": 3959,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 1211346,
-      "percentage": 71.9,
+      "lines_added": 1212270,
+      "percentage": 72.0,
       "color": "#3178c6"
     },
     {
@@ -518,11 +518,11 @@
       }
     },
     "icetrahan/primal-billing": {
-      "last_sha": "5f68b7471096f92dfe3746755df45527a2d25560",
-      "total_commits": 73,
-      "total_lines": 16232,
+      "last_sha": "315a847a48486124404dd6d0960f45abce062452",
+      "total_commits": 78,
+      "total_lines": 17156,
       "lang_lines": {
-        "TypeScript": 15631,
+        "TypeScript": 16555,
         "SQL": 350,
         "JavaScript": 251
       }
@@ -720,8 +720,8 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "00dad23a7cc0a32eaaa8d86e4d487115705e6068",
-      "total_commits": 598,
+      "last_sha": "244918a8e04170016e874ea2af91a7e1d17cf482",
+      "total_commits": 601,
       "total_lines": 5901,
       "lang_lines": {
         "Python": 4568,

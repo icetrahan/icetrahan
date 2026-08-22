@@ -1,30 +1,30 @@
 {
   "total_repos_analyzed": 86,
-  "total_lines_added": 1719489,
-  "total_commits": 4182,
+  "total_lines_added": 1763606,
+  "total_commits": 4220,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 1243619,
-      "percentage": 72.3,
+      "lines_added": 1258223,
+      "percentage": 71.4,
       "color": "#3178c6"
     },
     {
       "name": "Python",
       "lines_added": 286235,
-      "percentage": 16.6,
+      "percentage": 16.2,
       "color": "#3572A5"
     },
     {
       "name": "JavaScript",
-      "lines_added": 97118,
-      "percentage": 5.6,
+      "lines_added": 126623,
+      "percentage": 7.2,
       "color": "#f1e05a"
     },
     {
       "name": "Dart",
       "lines_added": 47826,
-      "percentage": 2.8,
+      "percentage": 2.7,
       "color": "#00B4AB"
     },
     {
@@ -35,7 +35,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 14039,
+      "lines_added": 14047,
       "percentage": 0.8,
       "color": "#e38c00"
     },
@@ -785,13 +785,13 @@
       }
     },
     "Arvo-Devs/modelapps": {
-      "last_sha": "7e59015be5179fe4d09e0103532d9a342c07525d",
-      "total_commits": 169,
-      "total_lines": 95356,
+      "last_sha": "ea88e16c14b37df131264c555673855eef04cde1",
+      "total_commits": 207,
+      "total_lines": 139473,
       "lang_lines": {
-        "TypeScript": 68328,
-        "SQL": 505,
-        "JavaScript": 26523
+        "TypeScript": 82932,
+        "SQL": 513,
+        "JavaScript": 56028
       }
     },
     "Taskiry/coordination": {

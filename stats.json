@@ -1,18 +1,18 @@
 {
   "total_repos_analyzed": 86,
-  "total_lines_added": 1791329,
-  "total_commits": 4626,
+  "total_lines_added": 1794233,
+  "total_commits": 4657,
   "languages": [
     {
       "name": "TypeScript",
       "lines_added": 1281829,
-      "percentage": 71.6,
+      "percentage": 71.5,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 288978,
-      "percentage": 16.1,
+      "lines_added": 291154,
+      "percentage": 16.2,
       "color": "#3572A5"
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "name": "C++",
-      "lines_added": 17064,
+      "lines_added": 17508,
       "percentage": 1.0,
       "color": "#f34b7d"
     },
@@ -53,7 +53,7 @@
     },
     {
       "name": "C#",
-      "lines_added": 566,
+      "lines_added": 850,
       "percentage": 0.0,
       "color": "#178600"
     },
@@ -683,8 +683,8 @@
       }
     },
     "icetrahan/primal-hosted-data": {
-      "last_sha": "246356dc56b47e31ae5b0eb2984524b85bc01fc2",
-      "total_commits": 202,
+      "last_sha": "f29902fbc8db8a9190169e8423736fe9b8dad638",
+      "total_commits": 203,
       "total_lines": 36283,
       "lang_lines": {
         "TypeScript": 31634,
@@ -720,24 +720,24 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "80c8668f680a122d1ef8fc967eaaa1a344201e56",
-      "total_commits": 910,
-      "total_lines": 8823,
+      "last_sha": "6fa5a78c468244847ff9362802af27fed3651df0",
+      "total_commits": 933,
+      "total_lines": 11198,
       "lang_lines": {
-        "Python": 7142,
+        "Python": 9233,
         "Shell": 56,
         "JavaScript": 957,
         "Lua": 134,
-        "C#": 534
+        "C#": 818
       }
     },
     "icetrahan/isle-mod-legacy": {
-      "last_sha": "53b967098e8c8a80416f960cee91764abef2cd1a",
-      "total_commits": 14,
-      "total_lines": 5558,
+      "last_sha": "52b04bd290c44480ff38ae8699a119485ef0a431",
+      "total_commits": 21,
+      "total_lines": 6087,
       "lang_lines": {
-        "C++": 3253,
-        "Python": 75,
+        "C++": 3697,
+        "Python": 160,
         "C": 2230
       }
     },

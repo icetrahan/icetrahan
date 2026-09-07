@@ -1,18 +1,18 @@
 {
   "total_repos_analyzed": 86,
-  "total_lines_added": 1912638,
-  "total_commits": 5616,
+  "total_lines_added": 1921320,
+  "total_commits": 5635,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 1358388,
-      "percentage": 71.0,
+      "lines_added": 1366305,
+      "percentage": 71.1,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 307604,
-      "percentage": 16.1,
+      "lines_added": 308217,
+      "percentage": 16.0,
       "color": "#3572A5"
     },
     {
@@ -35,7 +35,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 17242,
+      "lines_added": 17394,
       "percentage": 0.9,
       "color": "#e38c00"
     },
@@ -477,13 +477,13 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "b2dbbd5af95233bb711c2a1c67cf3a32245dd0ee",
-      "total_commits": 838,
-      "total_lines": 289361,
+      "last_sha": "923aa50d33fec9489c0ac01d545ad45edcd7277c",
+      "total_commits": 844,
+      "total_lines": 296368,
       "lang_lines": {
-        "TypeScript": 279011,
+        "TypeScript": 285866,
         "JavaScript": 8317,
-        "SQL": 1706,
+        "SQL": 1858,
         "Shell": 327
       }
     },
@@ -667,11 +667,11 @@
       }
     },
     "icetrahan/primal-tenant-web": {
-      "last_sha": "59597b854d4f0c231a89fd251cb81184be181844",
-      "total_commits": 89,
-      "total_lines": 53000,
+      "last_sha": "87d5311b3af85c8306fb2bad15f3638a95aad820",
+      "total_commits": 90,
+      "total_lines": 54062,
       "lang_lines": {
-        "TypeScript": 53000
+        "TypeScript": 54062
       }
     },
     "icetrahan/primal-hosted-bot": {
@@ -720,11 +720,11 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "4ceb85cac310cf9aca75a02b82d14e7f41bfbe36",
-      "total_commits": 1477,
-      "total_lines": 29658,
+      "last_sha": "30dfc3b180f0df99c4ebe0e6bd1fc71c2e8f0f35",
+      "total_commits": 1489,
+      "total_lines": 30271,
       "lang_lines": {
-        "Python": 25677,
+        "Python": 26290,
         "Shell": 250,
         "JavaScript": 957,
         "Lua": 134,

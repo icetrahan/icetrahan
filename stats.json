@@ -1,23 +1,23 @@
 {
   "total_repos_analyzed": 86,
-  "total_lines_added": 1989498,
-  "total_commits": 6155,
+  "total_lines_added": 2002213,
+  "total_commits": 6209,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 1419892,
-      "percentage": 71.4,
+      "lines_added": 1431688,
+      "percentage": 71.5,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 317668,
-      "percentage": 16.0,
+      "lines_added": 317905,
+      "percentage": 15.9,
       "color": "#3572A5"
     },
     {
       "name": "JavaScript",
-      "lines_added": 146054,
+      "lines_added": 146227,
       "percentage": 7.3,
       "color": "#f1e05a"
     },
@@ -29,7 +29,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 20406,
+      "lines_added": 20915,
       "percentage": 1.0,
       "color": "#e38c00"
     },
@@ -518,11 +518,11 @@
       }
     },
     "icetrahan/primal-billing": {
-      "last_sha": "6e3e981ba30ab6084287b5be95a7100be6f9276f",
-      "total_commits": 144,
-      "total_lines": 52030,
+      "last_sha": "7f447e3f8fd2655f6859f61e23c1dd32145e4633",
+      "total_commits": 147,
+      "total_lines": 53412,
       "lang_lines": {
-        "TypeScript": 51078,
+        "TypeScript": 52460,
         "SQL": 555,
         "JavaScript": 397
       }
@@ -658,17 +658,17 @@
       "lang_lines": {}
     },
     "icetrahan/primal-hosted-api": {
-      "last_sha": "c45104b46bb21baae52ac7e7298a6ceb9a0dd779",
-      "total_commits": 31,
-      "total_lines": 5729,
+      "last_sha": "a576839eabc55dbbdec6f26449ab3f65e98aeefc",
+      "total_commits": 33,
+      "total_lines": 6116,
       "lang_lines": {
         "SQL": 311,
-        "TypeScript": 5418
+        "TypeScript": 5805
       }
     },
     "icetrahan/primal-tenant-web": {
-      "last_sha": "090add579ac5b97e90e61e3f08caf0f8e5ee1255",
-      "total_commits": 108,
+      "last_sha": "cd99528c7eba5f3686fde02be0800085776504c4",
+      "total_commits": 110,
       "total_lines": 60008,
       "lang_lines": {
         "TypeScript": 60008
@@ -683,12 +683,12 @@
       }
     },
     "icetrahan/primal-hosted-data": {
-      "last_sha": "97c710e2eae4d66f3ad23ea3d732df6fc8b1022a",
-      "total_commits": 465,
-      "total_lines": 96203,
+      "last_sha": "3c9fa9d8a0b5fc63b2c38ec55729c841af774ae9",
+      "total_commits": 491,
+      "total_lines": 106644,
       "lang_lines": {
-        "TypeScript": 85595,
-        "SQL": 5451,
+        "TypeScript": 95548,
+        "SQL": 5939,
         "Shell": 5157
       }
     },
@@ -701,13 +701,13 @@
       }
     },
     "icetrahan/primal-render-worker": {
-      "last_sha": "0059dc0c1c513d3c5d6b2feced0b8a002d879942",
-      "total_commits": 13,
-      "total_lines": 5277,
+      "last_sha": "9f6f6ff1531eaf517a69d36151d5ac46b1b72cb4",
+      "total_commits": 17,
+      "total_lines": 5526,
       "lang_lines": {
-        "JavaScript": 4637,
-        "TypeScript": 625,
-        "SQL": 15
+        "JavaScript": 4810,
+        "TypeScript": 699,
+        "SQL": 17
       }
     },
     "icetrahan/isle-mod-rebuild": {
@@ -720,16 +720,16 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "377cf25a4f3160f2449872990371ecb50ba1b437",
-      "total_commits": 1863,
-      "total_lines": 40526,
+      "last_sha": "3c122327184833e161e6fea2481225af1648b5f2",
+      "total_commits": 1878,
+      "total_lines": 40648,
       "lang_lines": {
-        "Python": 33197,
+        "Python": 33300,
         "Shell": 1731,
         "JavaScript": 1006,
         "Lua": 134,
         "C#": 1188,
-        "SQL": 1654,
+        "SQL": 1673,
         "TypeScript": 1616
       }
     },
@@ -761,11 +761,11 @@
       }
     },
     "icetrahan/isle-adapter": {
-      "last_sha": "636f6ff8d1b7546679c1c5161ad304db2e392f27",
-      "total_commits": 14,
-      "total_lines": 5912,
+      "last_sha": "fc396c940cd28c860c92f0f0841b752475ea0b48",
+      "total_commits": 16,
+      "total_lines": 6046,
       "lang_lines": {
-        "Python": 5912
+        "Python": 6046
       }
     },
     "icetrahan/bpforge": {

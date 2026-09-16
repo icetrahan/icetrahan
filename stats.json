@@ -1,7 +1,7 @@
 {
   "total_repos_analyzed": 87,
-  "total_lines_added": 2193246,
-  "total_commits": 6740,
+  "total_lines_added": 2193588,
+  "total_commits": 6749,
   "languages": [
     {
       "name": "TypeScript",
@@ -11,7 +11,7 @@
     },
     {
       "name": "Python",
-      "lines_added": 364834,
+      "lines_added": 365160,
       "percentage": 16.6,
       "color": "#3572A5"
     },
@@ -41,7 +41,7 @@
     },
     {
       "name": "Shell",
-      "lines_added": 15049,
+      "lines_added": 15065,
       "percentage": 0.7,
       "color": "#89e051"
     },
@@ -832,11 +832,12 @@
       }
     },
     "icetrahan/VoiceForge": {
-      "last_sha": "77886e63764576625f3892d5522a0d18a6843da4",
-      "total_commits": 29,
-      "total_lines": 5288,
+      "last_sha": "74e68dcb894144aa86276d975b7a09da09c1e5d3",
+      "total_commits": 38,
+      "total_lines": 5630,
       "lang_lines": {
-        "Python": 5288
+        "Python": 5614,
+        "Shell": 16
       }
     }
   }

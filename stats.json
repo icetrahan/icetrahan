@@ -1,18 +1,18 @@
 {
   "total_repos_analyzed": 87,
-  "total_lines_added": 2375221,
-  "total_commits": 7601,
+  "total_lines_added": 2386781,
+  "total_commits": 7631,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 1713689,
-      "percentage": 72.2,
+      "lines_added": 1724995,
+      "percentage": 72.3,
       "color": "#3178c6"
     },
     {
       "name": "Python",
       "lines_added": 390860,
-      "percentage": 16.5,
+      "percentage": 16.4,
       "color": "#3572A5"
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 27109,
+      "lines_added": 27363,
       "percentage": 1.1,
       "color": "#e38c00"
     },
@@ -518,11 +518,11 @@
       }
     },
     "icetrahan/primal-billing": {
-      "last_sha": "d5b0f8e5b04e794fc369ece3fe924ca4f8de6d00",
-      "total_commits": 234,
-      "total_lines": 99048,
+      "last_sha": "d9ecbdc67484e57d73dc80a860b4c4a7b18b3b08",
+      "total_commits": 241,
+      "total_lines": 101576,
       "lang_lines": {
-        "TypeScript": 97838,
+        "TypeScript": 100366,
         "SQL": 813,
         "JavaScript": 397
       }
@@ -668,11 +668,11 @@
       }
     },
     "icetrahan/primal-tenant-web": {
-      "last_sha": "8765019391a6f8f152a116d7ca6cf592440f1005",
-      "total_commits": 215,
-      "total_lines": 118863,
+      "last_sha": "c407819180039ff65daed79ac306c815922f9618",
+      "total_commits": 220,
+      "total_lines": 123086,
       "lang_lines": {
-        "TypeScript": 118863
+        "TypeScript": 123086
       }
     },
     "icetrahan/primal-hosted-bot": {
@@ -684,12 +684,12 @@
       }
     },
     "icetrahan/primal-hosted-data": {
-      "last_sha": "a9479134294c0639160f17bfb353e27cb036ddfc",
-      "total_commits": 671,
-      "total_lines": 151295,
+      "last_sha": "07b400956b211f58d375f95d5a108d1d7cb2b96d",
+      "total_commits": 689,
+      "total_lines": 156104,
       "lang_lines": {
-        "TypeScript": 135360,
-        "SQL": 9834,
+        "TypeScript": 139915,
+        "SQL": 10088,
         "Shell": 6101
       }
     },

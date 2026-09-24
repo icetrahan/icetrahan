@@ -1,17 +1,17 @@
 {
   "total_repos_analyzed": 89,
-  "total_lines_added": 2514809,
-  "total_commits": 8186,
+  "total_lines_added": 2519478,
+  "total_commits": 8204,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 1815884,
+      "lines_added": 1819475,
       "percentage": 72.2,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 415528,
+      "lines_added": 416595,
       "percentage": 16.5,
       "color": "#3572A5"
     },
@@ -41,7 +41,7 @@
     },
     {
       "name": "Shell",
-      "lines_added": 17056,
+      "lines_added": 17067,
       "percentage": 0.7,
       "color": "#89e051"
     },
@@ -477,11 +477,11 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "3ffc82775dafcef4f92c7577d613ed5d50b99225",
-      "total_commits": 1064,
-      "total_lines": 464689,
+      "last_sha": "efa43bea9a3b7d89537cb709084d1f47ee908cdb",
+      "total_commits": 1074,
+      "total_lines": 468280,
       "lang_lines": {
-        "TypeScript": 452880,
+        "TypeScript": 456471,
         "JavaScript": 8317,
         "SQL": 3165,
         "Shell": 327
@@ -721,12 +721,12 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "b6f9aaeff7fc95a48b33df4f72c68c84bf085896",
-      "total_commits": 2803,
-      "total_lines": 75646,
+      "last_sha": "e7e14a75fe8a6c32bcb5f421afd2022ba29b30b8",
+      "total_commits": 2811,
+      "total_lines": 76724,
       "lang_lines": {
-        "Python": 64981,
-        "Shell": 3015,
+        "Python": 66048,
+        "Shell": 3026,
         "JavaScript": 1102,
         "Lua": 134,
         "C#": 1332,

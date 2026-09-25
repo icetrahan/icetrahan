@@ -1,24 +1,24 @@
 {
   "total_repos_analyzed": 89,
-  "total_lines_added": 2534786,
-  "total_commits": 8277,
+  "total_lines_added": 2575407,
+  "total_commits": 8370,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 1829410,
-      "percentage": 72.2,
+      "lines_added": 1865879,
+      "percentage": 72.5,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 421852,
-      "percentage": 16.6,
+      "lines_added": 424018,
+      "percentage": 16.5,
       "color": "#3572A5"
     },
     {
       "name": "JavaScript",
       "lines_added": 154985,
-      "percentage": 6.1,
+      "percentage": 6.0,
       "color": "#f1e05a"
     },
     {
@@ -29,8 +29,8 @@
     },
     {
       "name": "SQL",
-      "lines_added": 28996,
-      "percentage": 1.1,
+      "lines_added": 29929,
+      "percentage": 1.2,
       "color": "#e38c00"
     },
     {
@@ -41,7 +41,7 @@
     },
     {
       "name": "Shell",
-      "lines_added": 17094,
+      "lines_added": 18147,
       "percentage": 0.7,
       "color": "#89e051"
     },
@@ -477,14 +477,14 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "efa43bea9a3b7d89537cb709084d1f47ee908cdb",
-      "total_commits": 1074,
-      "total_lines": 468280,
+      "last_sha": "5e781de10e829a7a6c9fa4c30fca3089e72ddf0f",
+      "total_commits": 1123,
+      "total_lines": 506446,
       "lang_lines": {
-        "TypeScript": 456471,
+        "TypeScript": 492738,
         "JavaScript": 8317,
-        "SQL": 3165,
-        "Shell": 327
+        "SQL": 4062,
+        "Shell": 1329
       }
     },
     "icetrahan/primal-v2": {
@@ -518,11 +518,11 @@
       }
     },
     "icetrahan/primal-billing": {
-      "last_sha": "6a3e1ae8cb4c43f0939810637d58a4e963a5ffd8",
-      "total_commits": 293,
-      "total_lines": 131368,
+      "last_sha": "334f26cca1c6cbc40b58520313ddf94747f6589a",
+      "total_commits": 294,
+      "total_lines": 131480,
       "lang_lines": {
-        "TypeScript": 130021,
+        "TypeScript": 130133,
         "SQL": 891,
         "JavaScript": 456
       }
@@ -684,11 +684,11 @@
       }
     },
     "icetrahan/primal-hosted-data": {
-      "last_sha": "dda850159aa651425a804a03ccbf76c4f52d059f",
-      "total_commits": 775,
-      "total_lines": 175215,
+      "last_sha": "4640566f109bb3fa1fcf0443df3d563dc6c02a8f",
+      "total_commits": 776,
+      "total_lines": 175305,
       "lang_lines": {
-        "TypeScript": 158180,
+        "TypeScript": 158270,
         "SQL": 10934,
         "Shell": 6101
       }
@@ -721,16 +721,16 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "8b72b3624df5e937cdbdb57fdaf8ef38c67d07f8",
-      "total_commits": 2856,
-      "total_lines": 79314,
+      "last_sha": "72d06bf263408622c94b5f2e4c9f5d87e6737458",
+      "total_commits": 2898,
+      "total_lines": 81567,
       "lang_lines": {
-        "Python": 68611,
-        "Shell": 3053,
+        "Python": 70777,
+        "Shell": 3104,
         "JavaScript": 1102,
         "Lua": 134,
         "C#": 1332,
-        "SQL": 2976,
+        "SQL": 3012,
         "TypeScript": 2106
       }
     },

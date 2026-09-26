@@ -1,24 +1,24 @@
 {
   "total_repos_analyzed": 89,
-  "total_lines_added": 2614082,
-  "total_commits": 8590,
+  "total_lines_added": 2641713,
+  "total_commits": 8801,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 1891661,
-      "percentage": 72.4,
+      "lines_added": 1906317,
+      "percentage": 72.2,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 434055,
-      "percentage": 16.6,
+      "lines_added": 446940,
+      "percentage": 16.9,
       "color": "#3572A5"
     },
     {
       "name": "JavaScript",
       "lines_added": 156911,
-      "percentage": 6.0,
+      "percentage": 5.9,
       "color": "#f1e05a"
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 30408,
+      "lines_added": 30459,
       "percentage": 1.2,
       "color": "#e38c00"
     },
@@ -41,7 +41,7 @@
     },
     {
       "name": "Shell",
-      "lines_added": 18278,
+      "lines_added": 18317,
       "percentage": 0.7,
       "color": "#89e051"
     },
@@ -152,8 +152,8 @@
       }
     },
     "icetrahan/primal-discord": {
-      "last_sha": "4b5188b66086c7d3b68ce6e3567b78fb20be81f6",
-      "total_commits": 37,
+      "last_sha": "80850934d668a22199cc7a6f18d34c5136623ed6",
+      "total_commits": 38,
       "total_lines": 28056,
       "lang_lines": {
         "Python": 28056
@@ -519,11 +519,11 @@
       }
     },
     "icetrahan/primal-billing": {
-      "last_sha": "b1036d46186002aa7496ae3173a40827f7ebe185",
-      "total_commits": 308,
-      "total_lines": 135489,
+      "last_sha": "747098d025e9e16e08e7bd14d3c48ec372673089",
+      "total_commits": 317,
+      "total_lines": 137853,
       "lang_lines": {
-        "TypeScript": 134142,
+        "TypeScript": 136506,
         "SQL": 891,
         "JavaScript": 456
       }
@@ -659,37 +659,37 @@
       "lang_lines": {}
     },
     "icetrahan/primal-hosted-api": {
-      "last_sha": "c459d44cda3e0d90f1aec7447c922f05ba8f4048",
-      "total_commits": 77,
-      "total_lines": 21828,
+      "last_sha": "24bb510030f5b7c3e4ea6d346d58baaff429ae05",
+      "total_commits": 82,
+      "total_lines": 22457,
       "lang_lines": {
-        "SQL": 750,
-        "TypeScript": 20375,
+        "SQL": 796,
+        "TypeScript": 20958,
         "Python": 703
       }
     },
     "icetrahan/primal-tenant-web": {
-      "last_sha": "17592e31d5014000d793cf0a08fd2cb084bd81f2",
-      "total_commits": 269,
-      "total_lines": 139993,
+      "last_sha": "48aba8c7cf024e3260b5333f957526fa323df0ef",
+      "total_commits": 302,
+      "total_lines": 149616,
       "lang_lines": {
-        "TypeScript": 139993
+        "TypeScript": 149616
       }
     },
     "icetrahan/primal-hosted-bot": {
-      "last_sha": "c852657ea88c46cd65dbf9677791230c8a93ba32",
-      "total_commits": 117,
-      "total_lines": 70809,
+      "last_sha": "eb08c505a4d9d4a2a9ab52403002d0650f989b93",
+      "total_commits": 120,
+      "total_lines": 71351,
       "lang_lines": {
-        "Python": 70809
+        "Python": 71351
       }
     },
     "icetrahan/primal-hosted-data": {
-      "last_sha": "610d87938ec84e95c628bed76bfc1d16cac0acf5",
-      "total_commits": 814,
-      "total_lines": 184827,
+      "last_sha": "b5fae0ad8cb5ee524f80df7a899511a63cf8ecad",
+      "total_commits": 832,
+      "total_lines": 186913,
       "lang_lines": {
-        "TypeScript": 167162,
+        "TypeScript": 169248,
         "SQL": 11194,
         "Shell": 6101,
         "Python": 370
@@ -723,16 +723,16 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "ca7113d939e9ca631711bc118d12daf7f48f4584",
-      "total_commits": 2995,
-      "total_lines": 86550,
+      "last_sha": "802dddb9860c43b8971a94a2de9d5275c3246dfd",
+      "total_commits": 3137,
+      "total_lines": 98937,
       "lang_lines": {
-        "Python": 75629,
-        "Shell": 3235,
+        "Python": 87972,
+        "Shell": 3274,
         "JavaScript": 1102,
         "Lua": 134,
         "C#": 1332,
-        "SQL": 3012,
+        "SQL": 3017,
         "TypeScript": 2106
       }
     },

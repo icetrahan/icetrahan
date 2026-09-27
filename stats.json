@@ -1,11 +1,11 @@
 {
   "total_repos_analyzed": 89,
-  "total_lines_added": 2664896,
-  "total_commits": 8959,
+  "total_lines_added": 2665176,
+  "total_commits": 8960,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 1916033,
+      "lines_added": 1916313,
       "percentage": 71.9,
       "color": "#3178c6"
     },
@@ -519,11 +519,11 @@
       }
     },
     "icetrahan/primal-billing": {
-      "last_sha": "6f5c60547de687d7f9e68e8438aa24d87b67ba74",
-      "total_commits": 324,
-      "total_lines": 141719,
+      "last_sha": "aaa1f960397d6758db1f6b900c616e6624b397a9",
+      "total_commits": 325,
+      "total_lines": 141999,
       "lang_lines": {
-        "TypeScript": 139770,
+        "TypeScript": 140050,
         "SQL": 938,
         "JavaScript": 456,
         "Python": 555

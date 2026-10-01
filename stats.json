@@ -1,23 +1,23 @@
 {
   "total_repos_analyzed": 89,
-  "total_lines_added": 3024752,
-  "total_commits": 10076,
+  "total_lines_added": 3027274,
+  "total_commits": 10097,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 2203637,
+      "lines_added": 2205784,
       "percentage": 72.9,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 522106,
+      "lines_added": 522356,
       "percentage": 17.3,
       "color": "#3572A5"
     },
     {
       "name": "JavaScript",
-      "lines_added": 161736,
+      "lines_added": 161825,
       "percentage": 5.3,
       "color": "#f1e05a"
     },
@@ -41,7 +41,7 @@
     },
     {
       "name": "Shell",
-      "lines_added": 18981,
+      "lines_added": 19017,
       "percentage": 0.6,
       "color": "#89e051"
     },
@@ -519,11 +519,11 @@
       }
     },
     "icetrahan/primal-billing": {
-      "last_sha": "02a953c5382ad79625389cf5f6fc01a89524edba",
-      "total_commits": 441,
-      "total_lines": 225165,
+      "last_sha": "6f2ba73a35bfe3673519091c905cafe35b192757",
+      "total_commits": 451,
+      "total_lines": 227312,
       "lang_lines": {
-        "TypeScript": 223216,
+        "TypeScript": 225363,
         "SQL": 938,
         "JavaScript": 456,
         "Python": 555
@@ -729,13 +729,13 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "8b65a06e1270ad810b2e45327dfa382129de0241",
-      "total_commits": 3740,
-      "total_lines": 130406,
+      "last_sha": "fe90b549c187328a33adefe8825a9fd5293623cc",
+      "total_commits": 3750,
+      "total_lines": 130572,
       "lang_lines": {
-        "Python": 116029,
-        "Shell": 3639,
-        "JavaScript": 1156,
+        "Python": 116070,
+        "Shell": 3675,
+        "JavaScript": 1245,
         "Lua": 134,
         "C#": 1332,
         "SQL": 3566,
@@ -851,11 +851,11 @@
       }
     },
     "icetrahan/livekit-rt-server": {
-      "last_sha": "16b0009a27cfe4067d89b482394955f450e1b158",
-      "total_commits": 6,
-      "total_lines": 2258,
+      "last_sha": "b666c0a24b1c898affc7b0f0c15848fe8d31d27a",
+      "total_commits": 7,
+      "total_lines": 2467,
       "lang_lines": {
-        "Python": 2258
+        "Python": 2467
       }
     },
     "Arvo-Devs/Reacharound-Emails": {

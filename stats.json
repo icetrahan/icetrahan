@@ -1,11 +1,11 @@
 {
   "total_repos_analyzed": 89,
-  "total_lines_added": 3090455,
-  "total_commits": 10261,
+  "total_lines_added": 3090946,
+  "total_commits": 10269,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 2260976,
+      "lines_added": 2261467,
       "percentage": 73.2,
       "color": "#3178c6"
     },
@@ -478,11 +478,11 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "42a1631a4a6127477aa0d13170bdfdf7e6e19ac5",
-      "total_commits": 1284,
-      "total_lines": 638280,
+      "last_sha": "71fcfd832845212f6cd8e86f65a04b9622b1d8d1",
+      "total_commits": 1287,
+      "total_lines": 638388,
       "lang_lines": {
-        "TypeScript": 621723,
+        "TypeScript": 621831,
         "JavaScript": 8317,
         "SQL": 6631,
         "Shell": 1609
@@ -729,8 +729,8 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "70d81fa769a450f024fe4cdaa822b31115ba9c7e",
-      "total_commits": 3816,
+      "last_sha": "e2d60818030b2ad976dad46e57e85f549cb76c8f",
+      "total_commits": 3820,
       "total_lines": 136038,
       "lang_lines": {
         "Python": 120330,
@@ -859,11 +859,11 @@
       }
     },
     "Arvo-Devs/Reacharound-Emails": {
-      "last_sha": "33c8161bec70138b9d0a26ebc5059a123db69b71",
-      "total_commits": 17,
-      "total_lines": 5422,
+      "last_sha": "bc8088c8fab364a073d833c172d4cbe0cc5a7476",
+      "total_commits": 18,
+      "total_lines": 5805,
       "lang_lines": {
-        "TypeScript": 5418,
+        "TypeScript": 5801,
         "SQL": 4
       }
     }

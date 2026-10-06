@@ -1,24 +1,24 @@
 {
   "total_repos_analyzed": 89,
-  "total_lines_added": 3142342,
-  "total_commits": 10552,
+  "total_lines_added": 3158233,
+  "total_commits": 10609,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 2292055,
-      "percentage": 72.9,
+      "lines_added": 2304807,
+      "percentage": 73.0,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 545895,
+      "lines_added": 548915,
       "percentage": 17.4,
       "color": "#3572A5"
     },
     {
       "name": "JavaScript",
       "lines_added": 165267,
-      "percentage": 5.3,
+      "percentage": 5.2,
       "color": "#f1e05a"
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 37059,
+      "lines_added": 37169,
       "percentage": 1.2,
       "color": "#e38c00"
     },
@@ -41,7 +41,7 @@
     },
     {
       "name": "Shell",
-      "lines_added": 19297,
+      "lines_added": 19306,
       "percentage": 0.6,
       "color": "#89e051"
     },
@@ -519,11 +519,11 @@
       }
     },
     "icetrahan/primal-billing": {
-      "last_sha": "cdb64c898f17697ba07c8885c7158aa27e4e0aeb",
-      "total_commits": 474,
-      "total_lines": 245056,
+      "last_sha": "191df687dad8b4363932b662ca617d2361bcf1c3",
+      "total_commits": 477,
+      "total_lines": 254588,
       "lang_lines": {
-        "TypeScript": 243107,
+        "TypeScript": 252639,
         "SQL": 938,
         "JavaScript": 456,
         "Python": 555
@@ -663,21 +663,21 @@
       }
     },
     "icetrahan/primal-hosted-api": {
-      "last_sha": "ea0659044dbaf88532bcd285ad34eaf50b4fefe1",
-      "total_commits": 115,
-      "total_lines": 28723,
+      "last_sha": "05dc8e9da339f2bf5f862db2318f8a94df04aa05",
+      "total_commits": 116,
+      "total_lines": 30938,
       "lang_lines": {
-        "SQL": 816,
-        "TypeScript": 26649,
-        "Python": 1258
+        "SQL": 901,
+        "TypeScript": 28668,
+        "Python": 1369
       }
     },
     "icetrahan/primal-tenant-web": {
-      "last_sha": "d1f220b688b05d84aff2df831b0fd9f6056d3a0b",
-      "total_commits": 462,
-      "total_lines": 244072,
+      "last_sha": "61ceef5a7ac38487eb5d043d5260641dfe0a416c",
+      "total_commits": 464,
+      "total_lines": 244882,
       "lang_lines": {
-        "TypeScript": 242965,
+        "TypeScript": 243775,
         "Python": 1107
       }
     },
@@ -690,12 +690,12 @@
       }
     },
     "icetrahan/primal-hosted-data": {
-      "last_sha": "cedb9187020c823d5663fcd630bb442da89509d5",
-      "total_commits": 1032,
-      "total_lines": 243919,
+      "last_sha": "56ee427ed43c4e0f9bfc5f628cd967decf692669",
+      "total_commits": 1034,
+      "total_lines": 244227,
       "lang_lines": {
-        "TypeScript": 222340,
-        "SQL": 14553,
+        "TypeScript": 222623,
+        "SQL": 14578,
         "Shell": 6101,
         "Python": 925
       }
@@ -730,17 +730,17 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "41bf840d7d5503c2affeb568326711ffd73c47af",
-      "total_commits": 4009,
-      "total_lines": 151250,
+      "last_sha": "27fd088265e71d3124b23d82a449cfe671d3035c",
+      "total_commits": 4056,
+      "total_lines": 154266,
       "lang_lines": {
-        "Python": 135430,
-        "Shell": 3675,
+        "Python": 138329,
+        "Shell": 3684,
         "JavaScript": 2139,
         "Lua": 134,
         "C#": 1332,
         "SQL": 3733,
-        "TypeScript": 4807
+        "TypeScript": 4915
       }
     },
     "icetrahan/isle-mod-legacy": {
@@ -780,12 +780,12 @@
       }
     },
     "icetrahan/bpforge": {
-      "last_sha": "afffdc0194f0891b47d1851cdc73a1f8151712bb",
-      "total_commits": 15,
-      "total_lines": 3299,
+      "last_sha": "72ba18f550c221eda5e55f288a83d20ea5cc4042",
+      "total_commits": 16,
+      "total_lines": 3309,
       "lang_lines": {
         "C#": 32,
-        "Python": 1262,
+        "Python": 1272,
         "C++": 2005
       }
     },
@@ -823,8 +823,8 @@
       }
     },
     "icetrahan/isle-mod-project": {
-      "last_sha": "68691a8c74ba42bcb1676481277001f511acc182",
-      "total_commits": 11,
+      "last_sha": "051ea89cdafd46a42c93a5085e67c07895a80598",
+      "total_commits": 12,
       "total_lines": 2244,
       "lang_lines": {
         "Python": 2214,

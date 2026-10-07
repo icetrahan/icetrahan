@@ -1,17 +1,17 @@
 {
   "total_repos_analyzed": 89,
-  "total_lines_added": 3183631,
-  "total_commits": 10741,
+  "total_lines_added": 3186065,
+  "total_commits": 10780,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 2325063,
+      "lines_added": 2326136,
       "percentage": 73.0,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 553249,
+      "lines_added": 554560,
       "percentage": 17.4,
       "color": "#3572A5"
     },
@@ -29,7 +29,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 37369,
+      "lines_added": 37419,
       "percentage": 1.2,
       "color": "#e38c00"
     },
@@ -478,11 +478,11 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "f3af32412d9f9fd8e36e4cda2cb076bef4c50f07",
-      "total_commits": 1315,
-      "total_lines": 643380,
+      "last_sha": "5cd5360afe6cd67e6a8b39ca071701b650aaef34",
+      "total_commits": 1321,
+      "total_lines": 644344,
       "lang_lines": {
-        "TypeScript": 626823,
+        "TypeScript": 627787,
         "JavaScript": 8317,
         "SQL": 6631,
         "Shell": 1609
@@ -730,22 +730,22 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "c13eff88d25243c5e7249b3dd456419fa0c4cf93",
-      "total_commits": 4131,
-      "total_lines": 157768,
+      "last_sha": "761db615f356a3dc64f6913bda5346053ceded72",
+      "total_commits": 4163,
+      "total_lines": 159238,
       "lang_lines": {
-        "Python": 141547,
+        "Python": 142858,
         "Shell": 3684,
         "JavaScript": 2411,
         "Lua": 134,
         "C#": 1332,
-        "SQL": 3745,
-        "TypeScript": 4915
+        "SQL": 3795,
+        "TypeScript": 5024
       }
     },
     "icetrahan/isle-mod-legacy": {
-      "last_sha": "c43ef9e9c2e6d3954efc6b87a40f638f807ea8ae",
-      "total_commits": 32,
+      "last_sha": "485fa75a0d2b5a295f761f734b3819d9ea9f03ea",
+      "total_commits": 33,
       "total_lines": 8060,
       "lang_lines": {
         "C++": 5523,

@@ -1,18 +1,18 @@
 {
   "total_repos_analyzed": 89,
-  "total_lines_added": 3293522,
-  "total_commits": 11323,
+  "total_lines_added": 3308134,
+  "total_commits": 11387,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 2397614,
-      "percentage": 72.8,
+      "lines_added": 2410256,
+      "percentage": 72.9,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 568549,
-      "percentage": 17.3,
+      "lines_added": 569927,
+      "percentage": 17.2,
       "color": "#3572A5"
     },
     {
@@ -24,12 +24,12 @@
     {
       "name": "Dart",
       "lines_added": 47826,
-      "percentage": 1.5,
+      "percentage": 1.4,
       "color": "#00B4AB"
     },
     {
       "name": "SQL",
-      "lines_added": 39379,
+      "lines_added": 39866,
       "percentage": 1.2,
       "color": "#e38c00"
     },
@@ -478,13 +478,13 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "192af136a3a9db795f9a7b090fe5a9de770d0f03",
-      "total_commits": 1373,
-      "total_lines": 686386,
+      "last_sha": "e09c83b291569faa3ca2ff8a8519c5c49e2426c2",
+      "total_commits": 1380,
+      "total_lines": 692678,
       "lang_lines": {
-        "TypeScript": 669125,
+        "TypeScript": 675223,
         "JavaScript": 8575,
-        "SQL": 7077,
+        "SQL": 7271,
         "Shell": 1609
       }
     },
@@ -730,17 +730,18 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "a3c936d60c33b2fd8f5eb798dad4bca767a03894",
-      "total_commits": 4510,
-      "total_lines": 175172,
+      "last_sha": "f283a406f04b93c4124b55a41e88ae14256cbd82",
+      "total_commits": 4565,
+      "total_lines": 176876,
       "lang_lines": {
-        "Python": 156355,
+        "Python": 157733,
         "Shell": 3724,
         "JavaScript": 3172,
         "Lua": 134,
         "C#": 1332,
-        "SQL": 5181,
-        "TypeScript": 5274
+        "SQL": 5402,
+        "TypeScript": 5274,
+        "Java": 105
       }
     },
     "icetrahan/isle-mod-legacy": {
@@ -860,12 +861,12 @@
       }
     },
     "Arvo-Devs/Reacharound-Emails": {
-      "last_sha": "6ca34467ef68b9444acc0a85108e8e814870d01a",
-      "total_commits": 26,
-      "total_lines": 10471,
+      "last_sha": "484fb7b6cfe22e0b8c5fa8a4bd65c4c93157976e",
+      "total_commits": 28,
+      "total_lines": 17087,
       "lang_lines": {
-        "TypeScript": 10449,
-        "SQL": 22
+        "TypeScript": 16993,
+        "SQL": 94
       }
     }
   }

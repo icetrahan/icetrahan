@@ -1,24 +1,24 @@
 {
   "total_repos_analyzed": 89,
-  "total_lines_added": 3273194,
-  "total_commits": 11174,
+  "total_lines_added": 3278379,
+  "total_commits": 11202,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 2382998,
+      "lines_added": 2387132,
       "percentage": 72.8,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 564312,
+      "lines_added": 565276,
       "percentage": 17.2,
       "color": "#3572A5"
     },
     {
       "name": "JavaScript",
       "lines_added": 178378,
-      "percentage": 5.5,
+      "percentage": 5.4,
       "color": "#f1e05a"
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 38521,
+      "lines_added": 38608,
       "percentage": 1.2,
       "color": "#e38c00"
     },
@@ -478,11 +478,11 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "c7d58f16fbbfa00940e405345f41e6a5ee0dec06",
-      "total_commits": 1363,
-      "total_lines": 683432,
+      "last_sha": "86caaaa81f5bb964b22a3a4f46dbf6ea02c57f66",
+      "total_commits": 1365,
+      "total_lines": 683738,
       "lang_lines": {
-        "TypeScript": 666171,
+        "TypeScript": 666477,
         "JavaScript": 8575,
         "SQL": 7077,
         "Shell": 1609
@@ -519,11 +519,11 @@
       }
     },
     "icetrahan/primal-billing": {
-      "last_sha": "810b395a29e0d7cbd21fff07ecd1bbce23a94b57",
-      "total_commits": 491,
-      "total_lines": 265326,
+      "last_sha": "7f5a2837479c4411667e8529d832292c0567e90e",
+      "total_commits": 494,
+      "total_lines": 269121,
       "lang_lines": {
-        "TypeScript": 263377,
+        "TypeScript": 267172,
         "SQL": 938,
         "JavaScript": 456,
         "Python": 555
@@ -730,17 +730,17 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "0a65e9a68132304c965c7427cc64f07de988b792",
-      "total_commits": 4387,
-      "total_lines": 169359,
+      "last_sha": "50966f2dd4857f5d44127cb72b1f3398ee07be0b",
+      "total_commits": 4410,
+      "total_lines": 170443,
       "lang_lines": {
-        "Python": 152118,
+        "Python": 153082,
         "Shell": 3684,
         "JavaScript": 2595,
         "Lua": 134,
         "C#": 1332,
-        "SQL": 4373,
-        "TypeScript": 5123
+        "SQL": 4460,
+        "TypeScript": 5156
       }
     },
     "icetrahan/isle-mod-legacy": {

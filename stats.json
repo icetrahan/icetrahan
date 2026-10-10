@@ -1,23 +1,23 @@
 {
   "total_repos_analyzed": 89,
-  "total_lines_added": 3284264,
-  "total_commits": 11242,
+  "total_lines_added": 3293522,
+  "total_commits": 11322,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 2392628,
-      "percentage": 72.9,
+      "lines_added": 2397614,
+      "percentage": 72.8,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 565633,
-      "percentage": 17.2,
+      "lines_added": 568549,
+      "percentage": 17.3,
       "color": "#3572A5"
     },
     {
       "name": "JavaScript",
-      "lines_added": 178378,
+      "lines_added": 178955,
       "percentage": 5.4,
       "color": "#f1e05a"
     },
@@ -29,7 +29,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 38640,
+      "lines_added": 39379,
       "percentage": 1.2,
       "color": "#e38c00"
     },
@@ -41,7 +41,7 @@
     },
     {
       "name": "Shell",
-      "lines_added": 19348,
+      "lines_added": 19388,
       "percentage": 0.6,
       "color": "#89e051"
     },
@@ -478,11 +478,11 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "86caaaa81f5bb964b22a3a4f46dbf6ea02c57f66",
-      "total_commits": 1365,
-      "total_lines": 683738,
+      "last_sha": "192af136a3a9db795f9a7b090fe5a9de770d0f03",
+      "total_commits": 1373,
+      "total_lines": 686386,
       "lang_lines": {
-        "TypeScript": 666477,
+        "TypeScript": 669125,
         "JavaScript": 8575,
         "SQL": 7077,
         "Shell": 1609
@@ -730,16 +730,16 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "d2a931e9f03042636d6ce1772f1efa4bfd7ca541",
-      "total_commits": 4440,
-      "total_lines": 170918,
+      "last_sha": "a3c936d60c33b2fd8f5eb798dad4bca767a03894",
+      "total_commits": 4510,
+      "total_lines": 175172,
       "lang_lines": {
-        "Python": 153439,
-        "Shell": 3684,
-        "JavaScript": 2595,
+        "Python": 156355,
+        "Shell": 3724,
+        "JavaScript": 3172,
         "Lua": 134,
         "C#": 1332,
-        "SQL": 4460,
+        "SQL": 5181,
         "TypeScript": 5274
       }
     },
@@ -860,12 +860,12 @@
       }
     },
     "Arvo-Devs/Reacharound-Emails": {
-      "last_sha": "f7a2e7852f3b863889a21b6149006387b396b906",
-      "total_commits": 24,
-      "total_lines": 8115,
+      "last_sha": "6ca34467ef68b9444acc0a85108e8e814870d01a",
+      "total_commits": 26,
+      "total_lines": 10471,
       "lang_lines": {
-        "TypeScript": 8111,
-        "SQL": 4
+        "TypeScript": 10449,
+        "SQL": 22
       }
     }
   }

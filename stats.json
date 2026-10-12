@@ -1,12 +1,12 @@
 {
   "total_repos_analyzed": 89,
-  "total_lines_added": 3459346,
-  "total_commits": 12503,
+  "total_lines_added": 3464753,
+  "total_commits": 12530,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 2453062,
-      "percentage": 70.9,
+      "lines_added": 2458457,
+      "percentage": 71.0,
       "color": "#3178c6"
     },
     {
@@ -35,7 +35,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 40732,
+      "lines_added": 40744,
       "percentage": 1.2,
       "color": "#e38c00"
     },
@@ -478,11 +478,11 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "9ae41f0284e00edcbaaadfbdadc2f9e0f64b7de2",
-      "total_commits": 1385,
-      "total_lines": 697010,
+      "last_sha": "bafdaddd9cb853f62fa092fb9af8ec93bee92bba",
+      "total_commits": 1390,
+      "total_lines": 698076,
       "lang_lines": {
-        "TypeScript": 679555,
+        "TypeScript": 680621,
         "JavaScript": 8575,
         "SQL": 7271,
         "Shell": 1609
@@ -519,11 +519,11 @@
       }
     },
     "icetrahan/primal-billing": {
-      "last_sha": "0f29fc6081493d45e4bfa30ff0edd388f250754c",
-      "total_commits": 521,
-      "total_lines": 288200,
+      "last_sha": "7eef6b8b4a8e25533cf3c8882f7407061ae8f4fc",
+      "total_commits": 522,
+      "total_lines": 288420,
       "lang_lines": {
-        "TypeScript": 286245,
+        "TypeScript": 286465,
         "SQL": 938,
         "JavaScript": 462,
         "Python": 555
@@ -663,12 +663,12 @@
       }
     },
     "icetrahan/primal-hosted-api": {
-      "last_sha": "db89afdbe145a180b5910aaa7541409870f8c565",
-      "total_commits": 132,
-      "total_lines": 37785,
+      "last_sha": "898b4e2ff7912eb5fd3564f90411f5f03be6012e",
+      "total_commits": 143,
+      "total_lines": 41906,
       "lang_lines": {
-        "SQL": 1103,
-        "TypeScript": 35088,
+        "SQL": 1115,
+        "TypeScript": 39197,
         "Python": 1594
       }
     },
@@ -730,8 +730,8 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "1ad083d5f277e852f4b3c72807bd29bfe1c68882",
-      "total_commits": 5491,
+      "last_sha": "c3f67d65b4637876d8973ee8818b44763051e418",
+      "total_commits": 5501,
       "total_lines": 212224,
       "lang_lines": {
         "Python": 190101,

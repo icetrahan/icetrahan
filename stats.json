@@ -1,30 +1,30 @@
 {
-  "total_repos_analyzed": 89,
-  "total_lines_added": 3514996,
-  "total_commits": 12816,
+  "total_repos_analyzed": 91,
+  "total_lines_added": 3576665,
+  "total_commits": 13050,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 2488897,
-      "percentage": 70.8,
+      "lines_added": 2539454,
+      "percentage": 71.0,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 682486,
+      "lines_added": 692568,
       "percentage": 19.4,
       "color": "#3572A5"
     },
     {
       "name": "JavaScript",
-      "lines_added": 184661,
-      "percentage": 5.3,
+      "lines_added": 184953,
+      "percentage": 5.2,
       "color": "#f1e05a"
     },
     {
       "name": "Dart",
       "lines_added": 47826,
-      "percentage": 1.4,
+      "percentage": 1.3,
       "color": "#00B4AB"
     },
     {
@@ -35,13 +35,13 @@
     },
     {
       "name": "SQL",
-      "lines_added": 41066,
+      "lines_added": 41761,
       "percentage": 1.2,
       "color": "#e38c00"
     },
     {
       "name": "Shell",
-      "lines_added": 20521,
+      "lines_added": 20564,
       "percentage": 0.6,
       "color": "#89e051"
     },
@@ -168,11 +168,11 @@
       }
     },
     "Taskiry/api": {
-      "last_sha": "284c9d54e3107114e9cf93d904847d75cbe5862d",
-      "total_commits": 68,
-      "total_lines": 26450,
+      "last_sha": "e10c7d3466596ddd2d514092466a992a1f287f70",
+      "total_commits": 74,
+      "total_lines": 30147,
       "lang_lines": {
-        "TypeScript": 24379,
+        "TypeScript": 28076,
         "SQL": 1013,
         "Shell": 198,
         "JavaScript": 860
@@ -187,12 +187,12 @@
       }
     },
     "Taskiry/app": {
-      "last_sha": "474aac559f57d4fe60afbdbddc9adcbbcf38cefd",
-      "total_commits": 109,
-      "total_lines": 82758,
+      "last_sha": "521294196eb2e85f0f7eb253d474be89b46805be",
+      "total_commits": 111,
+      "total_lines": 87181,
       "lang_lines": {
-        "TypeScript": 72418,
-        "JavaScript": 10340
+        "TypeScript": 76549,
+        "JavaScript": 10632
       }
     },
     "icetrahan/skin-creator-app": {
@@ -730,17 +730,17 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "cea1153807bd647db54ec66960dab731b85e539d",
-      "total_commits": 5707,
-      "total_lines": 218800,
+      "last_sha": "ce800f52b3bb0a4edfd7ef283e3bfee74b2c0327",
+      "total_commits": 5908,
+      "total_lines": 229083,
       "lang_lines": {
-        "Python": 195865,
-        "Shell": 4698,
+        "Python": 205671,
+        "Shell": 4741,
         "JavaScript": 5267,
         "Lua": 134,
         "C#": 1385,
-        "SQL": 6032,
-        "TypeScript": 5314,
+        "SQL": 6127,
+        "TypeScript": 5653,
         "Java": 105
       }
     },
@@ -868,6 +868,25 @@
       "lang_lines": {
         "TypeScript": 16993,
         "SQL": 94
+      }
+    },
+    "DungeonNexusEntertainment/DNEWebsite": {
+      "last_sha": "4cbfdbf724a84c72b9a6da2646a39b7cfdadd83e",
+      "total_commits": 24,
+      "total_lines": 39883,
+      "lang_lines": {
+        "TypeScript": 39367,
+        "SQL": 516
+      }
+    },
+    "icetrahan/primal-portfolios": {
+      "last_sha": "76f96047fa61ca462fdc992aa2164e4cd31bf8c6",
+      "total_commits": 1,
+      "total_lines": 3383,
+      "lang_lines": {
+        "SQL": 84,
+        "Python": 276,
+        "TypeScript": 3023
       }
     }
   }

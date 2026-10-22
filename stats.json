@@ -1,17 +1,17 @@
 {
   "total_repos_analyzed": 97,
-  "total_lines_added": 4204143,
-  "total_commits": 16729,
+  "total_lines_added": 4216560,
+  "total_commits": 16802,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 2942388,
+      "lines_added": 2953176,
       "percentage": 70.0,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 870378,
+      "lines_added": 871785,
       "percentage": 20.7,
       "color": "#3572A5"
     },
@@ -35,13 +35,13 @@
     },
     {
       "name": "SQL",
-      "lines_added": 47440,
+      "lines_added": 47582,
       "percentage": 1.1,
       "color": "#e38c00"
     },
     {
       "name": "Shell",
-      "lines_added": 26312,
+      "lines_added": 26392,
       "percentage": 0.6,
       "color": "#89e051"
     },
@@ -519,12 +519,12 @@
       }
     },
     "icetrahan/primal-billing": {
-      "last_sha": "0241a6f69f6f88780c98959396d2bffab341c817",
-      "total_commits": 771,
-      "total_lines": 392841,
+      "last_sha": "24991fdac0cbe61e92bf05d8b8160b9036371956",
+      "total_commits": 788,
+      "total_lines": 397924,
       "lang_lines": {
-        "TypeScript": 390237,
-        "SQL": 1291,
+        "TypeScript": 395266,
+        "SQL": 1345,
         "JavaScript": 694,
         "Python": 555,
         "Shell": 64
@@ -691,14 +691,14 @@
       }
     },
     "icetrahan/primal-hosted-data": {
-      "last_sha": "960212c8b10d53403efee55d20d3fd7649e0e970",
-      "total_commits": 1365,
-      "total_lines": 323654,
+      "last_sha": "bbf8447eacc3873c9f3cc6c8b93e1a99bc280ac1",
+      "total_commits": 1379,
+      "total_lines": 330068,
       "lang_lines": {
-        "TypeScript": 296311,
-        "SQL": 17526,
+        "TypeScript": 302070,
+        "SQL": 17614,
         "Shell": 6299,
-        "Python": 3518
+        "Python": 4085
       }
     },
     "icetrahan/primal-voice-launcher": {
@@ -732,12 +732,12 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "034e0b691d32f7c739fe238db9a8c3e8e86f511d",
-      "total_commits": 8313,
-      "total_lines": 320728,
+      "last_sha": "ba901c49e34e85dd9c8fca7397cca28a46cd1146",
+      "total_commits": 8355,
+      "total_lines": 321648,
       "lang_lines": {
-        "Python": 292149,
-        "Shell": 6434,
+        "Python": 292989,
+        "Shell": 6514,
         "JavaScript": 6071,
         "Lua": 134,
         "C#": 1441,

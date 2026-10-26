@@ -1,7 +1,7 @@
 {
   "total_repos_analyzed": 97,
-  "total_lines_added": 4458676,
-  "total_commits": 18343,
+  "total_lines_added": 4459995,
+  "total_commits": 18394,
   "languages": [
     {
       "name": "TypeScript",
@@ -11,7 +11,7 @@
     },
     {
       "name": "Python",
-      "lines_added": 919404,
+      "lines_added": 920489,
       "percentage": 20.6,
       "color": "#3572A5"
     },
@@ -23,7 +23,7 @@
     },
     {
       "name": "C++",
-      "lines_added": 52738,
+      "lines_added": 52856,
       "percentage": 1.2,
       "color": "#f34b7d"
     },
@@ -41,7 +41,7 @@
     },
     {
       "name": "Shell",
-      "lines_added": 32603,
+      "lines_added": 32626,
       "percentage": 0.7,
       "color": "#89e051"
     },
@@ -53,7 +53,7 @@
     },
     {
       "name": "C#",
-      "lines_added": 1480,
+      "lines_added": 1573,
       "percentage": 0.0,
       "color": "#178600"
     },
@@ -732,18 +732,19 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "39e9f1fe2c2117ed16d1445baea8c95cf33c666d",
-      "total_commits": 9337,
-      "total_lines": 348089,
+      "last_sha": "c22a2853bd1a63d3e6fe861929102cf5199ffb29",
+      "total_commits": 9388,
+      "total_lines": 349408,
       "lang_lines": {
-        "Python": 317939,
-        "Shell": 7941,
+        "Python": 319024,
+        "Shell": 7964,
         "JavaScript": 6071,
         "Lua": 134,
-        "C#": 1441,
+        "C#": 1534,
         "SQL": 7092,
         "TypeScript": 7366,
-        "Java": 105
+        "Java": 105,
+        "C++": 118
       }
     },
     "icetrahan/isle-mod-legacy": {

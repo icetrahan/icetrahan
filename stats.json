@@ -1,17 +1,17 @@
 {
   "total_repos_analyzed": 97,
-  "total_lines_added": 4460950,
-  "total_commits": 18441,
+  "total_lines_added": 4464486,
+  "total_commits": 18476,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 3129041,
+      "lines_added": 3130857,
       "percentage": 70.1,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 921311,
+      "lines_added": 922822,
       "percentage": 20.7,
       "color": "#3572A5"
     },
@@ -29,7 +29,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 50599,
+      "lines_added": 50625,
       "percentage": 1.1,
       "color": "#e38c00"
     },
@@ -53,7 +53,7 @@
     },
     {
       "name": "C#",
-      "lines_added": 1706,
+      "lines_added": 1889,
       "percentage": 0.0,
       "color": "#178600"
     },
@@ -691,11 +691,11 @@
       }
     },
     "icetrahan/primal-hosted-data": {
-      "last_sha": "e394e6498b911f720c776bc81e0e85d92870c2b4",
-      "total_commits": 1487,
-      "total_lines": 374569,
+      "last_sha": "8e61076db83f79fa1b9b6ea8b819291946cd3ee6",
+      "total_commits": 1489,
+      "total_lines": 374691,
       "lang_lines": {
-        "TypeScript": 342507,
+        "TypeScript": 342629,
         "SQL": 18386,
         "Shell": 9591,
         "Python": 4085
@@ -732,15 +732,15 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "63d0e479fc65c46a4fe6ef4300f6c8bc131dd6e1",
-      "total_commits": 9431,
-      "total_lines": 350363,
+      "last_sha": "c94cd52733d13e90a036a5614fac3da1edd6d77a",
+      "total_commits": 9458,
+      "total_lines": 352057,
       "lang_lines": {
-        "Python": 319846,
+        "Python": 321357,
         "Shell": 7964,
         "JavaScript": 6071,
         "Lua": 134,
-        "C#": 1667,
+        "C#": 1850,
         "SQL": 7092,
         "TypeScript": 7366,
         "Java": 105,
@@ -867,12 +867,12 @@
       }
     },
     "Arvo-Devs/Reacharound-Emails": {
-      "last_sha": "10bf265e47a76b43cc5510c03a18abb5c4817c2e",
-      "total_commits": 45,
-      "total_lines": 38178,
+      "last_sha": "559c22c030967ae0fe0831ece4606eec95682001",
+      "total_commits": 51,
+      "total_lines": 39898,
       "lang_lines": {
-        "TypeScript": 37786,
-        "SQL": 392
+        "TypeScript": 39480,
+        "SQL": 418
       }
     },
     "DungeonNexusEntertainment/DNEWebsite": {

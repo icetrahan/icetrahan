@@ -1,17 +1,17 @@
 {
   "total_repos_analyzed": 97,
-  "total_lines_added": 4479263,
-  "total_commits": 18704,
+  "total_lines_added": 4481100,
+  "total_commits": 18736,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 3142362,
-      "percentage": 70.2,
+      "lines_added": 3142634,
+      "percentage": 70.1,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 925802,
+      "lines_added": 927367,
       "percentage": 20.7,
       "color": "#3572A5"
     },
@@ -683,11 +683,11 @@
       }
     },
     "icetrahan/primal-hosted-bot": {
-      "last_sha": "6f64029a2b87dc7cf2ddb085a07bf4f299c865a1",
-      "total_commits": 360,
-      "total_lines": 212072,
+      "last_sha": "1b25cf9505fac920837f4ac626804d4d35b7e6ed",
+      "total_commits": 364,
+      "total_lines": 213637,
       "lang_lines": {
-        "Python": 212072
+        "Python": 213637
       }
     },
     "icetrahan/primal-hosted-data": {
@@ -732,8 +732,8 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "e308c5b38c122bf7be8e772b552a6abe6f1d8faa",
-      "total_commits": 9645,
+      "last_sha": "6425a2d4f9cc9a1f9cfabbffc0e2371b0dc55574",
+      "total_commits": 9672,
       "total_lines": 352289,
       "lang_lines": {
         "Python": 321499,
@@ -876,11 +876,11 @@
       }
     },
     "DungeonNexusEntertainment/DNEWebsite": {
-      "last_sha": "aec4f667bc53a38dd91c47e1e9aca637714ad912",
-      "total_commits": 120,
-      "total_lines": 67156,
+      "last_sha": "1960029e44c68b53c0b169009f68d24de2aff9ab",
+      "total_commits": 121,
+      "total_lines": 67428,
       "lang_lines": {
-        "TypeScript": 66529,
+        "TypeScript": 66801,
         "SQL": 627
       }
     },

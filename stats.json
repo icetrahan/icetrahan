@@ -1,17 +1,17 @@
 {
   "total_repos_analyzed": 99,
-  "total_lines_added": 4552191,
-  "total_commits": 18876,
+  "total_lines_added": 4561631,
+  "total_commits": 18954,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 3207347,
+      "lines_added": 3216644,
       "percentage": 70.5,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 933037,
+      "lines_added": 933174,
       "percentage": 20.5,
       "color": "#3572A5"
     },
@@ -29,14 +29,14 @@
     },
     {
       "name": "SQL",
-      "lines_added": 51244,
+      "lines_added": 51250,
       "percentage": 1.1,
       "color": "#e38c00"
     },
     {
       "name": "Dart",
       "lines_added": 47826,
-      "percentage": 1.1,
+      "percentage": 1.0,
       "color": "#00B4AB"
     },
     {
@@ -478,11 +478,11 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "c1fd52cbd5cd8100333e3e662760049027b7d108",
-      "total_commits": 1526,
-      "total_lines": 910502,
+      "last_sha": "d8c3037e16f4c2731b12865b9ac3f6bf816ed942",
+      "total_commits": 1531,
+      "total_lines": 913013,
       "lang_lines": {
-        "TypeScript": 890087,
+        "TypeScript": 892598,
         "JavaScript": 8695,
         "SQL": 10111,
         "Shell": 1609
@@ -635,11 +635,11 @@
       }
     },
     "icetrahan/isla-prima-web": {
-      "last_sha": "a95234f5c87be0faef9afa7aca1c44f9295ace9b",
-      "total_commits": 20,
-      "total_lines": 19974,
+      "last_sha": "78721868d8d9711425f3cf767fb697008e6a5116",
+      "total_commits": 24,
+      "total_lines": 25238,
       "lang_lines": {
-        "TypeScript": 19154,
+        "TypeScript": 24418,
         "JavaScript": 332,
         "SQL": 388,
         "Python": 100
@@ -733,11 +733,11 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "48c928f6483813e7d3fb8d6e588ac030566d47ab",
-      "total_commits": 9724,
-      "total_lines": 353387,
+      "last_sha": "4b050c5440b91574853de4a56074239213eb5fc4",
+      "total_commits": 9789,
+      "total_lines": 353524,
       "lang_lines": {
-        "Python": 322597,
+        "Python": 322734,
         "Shell": 7964,
         "JavaScript": 6071,
         "Lua": 134,
@@ -877,12 +877,12 @@
       }
     },
     "DungeonNexusEntertainment/DNEWebsite": {
-      "last_sha": "723ffb0d537f9633e611af499d8c046f2bfe5f93",
-      "total_commits": 122,
-      "total_lines": 67438,
+      "last_sha": "1734d75fb3ca50d38e522ebf76e440c12501910b",
+      "total_commits": 126,
+      "total_lines": 68966,
       "lang_lines": {
-        "TypeScript": 66811,
-        "SQL": 627
+        "TypeScript": 68333,
+        "SQL": 633
       }
     },
     "icetrahan/primal-portfolios": {

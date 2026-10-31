@@ -1,18 +1,18 @@
 {
   "total_repos_analyzed": 101,
-  "total_lines_added": 4873485,
-  "total_commits": 19775,
+  "total_lines_added": 4877230,
+  "total_commits": 19801,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 3453242,
+      "lines_added": 3456930,
       "percentage": 70.9,
       "color": "#3178c6"
     },
     {
       "name": "Python",
       "lines_added": 982458,
-      "percentage": 20.2,
+      "percentage": 20.1,
       "color": "#3572A5"
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 52810,
+      "lines_added": 52867,
       "percentage": 1.1,
       "color": "#e38c00"
     },
@@ -736,8 +736,8 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "56500ca54fe895a728a1054bbdf984231a4e6845",
-      "total_commits": 10337,
+      "last_sha": "15be8a6cdb84c8f00fc1ed7821a130ee2d84c679",
+      "total_commits": 10358,
       "total_lines": 367771,
       "lang_lines": {
         "Python": 336832,
@@ -872,12 +872,12 @@
       }
     },
     "Arvo-Devs/Reacharound-Emails": {
-      "last_sha": "f8ff10b1fc27c7daf3a6c9ecb7ad716dd709ca55",
-      "total_commits": 67,
-      "total_lines": 46551,
+      "last_sha": "4b94eac4483f69764483a8f7651a9aa07fab4288",
+      "total_commits": 72,
+      "total_lines": 50296,
       "lang_lines": {
-        "TypeScript": 46125,
-        "SQL": 426
+        "TypeScript": 49813,
+        "SQL": 483
       }
     },
     "DungeonNexusEntertainment/DNEWebsite": {

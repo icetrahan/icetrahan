@@ -1,29 +1,29 @@
 {
   "total_repos_analyzed": 101,
-  "total_lines_added": 4877230,
-  "total_commits": 19802,
+  "total_lines_added": 4887776,
+  "total_commits": 19965,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 3456930,
-      "percentage": 70.9,
+      "lines_added": 3459198,
+      "percentage": 70.8,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 982458,
-      "percentage": 20.1,
+      "lines_added": 989439,
+      "percentage": 20.2,
       "color": "#3572A5"
     },
     {
       "name": "JavaScript",
-      "lines_added": 236061,
+      "lines_added": 236233,
       "percentage": 4.8,
       "color": "#f1e05a"
     },
     {
       "name": "C++",
-      "lines_added": 55229,
+      "lines_added": 55363,
       "percentage": 1.1,
       "color": "#f34b7d"
     },
@@ -41,7 +41,7 @@
     },
     {
       "name": "Shell",
-      "lines_added": 38752,
+      "lines_added": 39743,
       "percentage": 0.8,
       "color": "#89e051"
     },
@@ -213,11 +213,11 @@
       }
     },
     "icetrahan/primal-patcher": {
-      "last_sha": "de1d2a4fd2e35683c4d27136b1fc9093e43bdea9",
-      "total_commits": 17,
-      "total_lines": 2522,
+      "last_sha": "dcf754d12079ae5c69865ec92016c97f6c158094",
+      "total_commits": 21,
+      "total_lines": 3018,
       "lang_lines": {
-        "Python": 687,
+        "Python": 1183,
         "Shell": 1835
       }
     },
@@ -238,12 +238,12 @@
       }
     },
     "icetrahan/PTEggos": {
-      "last_sha": "4556dbfa9d90bd7070ff9f90650514421ac10c8f",
-      "total_commits": 136,
-      "total_lines": 17500,
+      "last_sha": "4f99aba1d83476039d668337be61661bb71a78a7",
+      "total_commits": 138,
+      "total_lines": 18493,
       "lang_lines": {
-        "Shell": 15501,
-        "Python": 1679,
+        "Shell": 16492,
+        "Python": 1681,
         "C++": 320
       }
     },
@@ -522,13 +522,13 @@
       }
     },
     "icetrahan/primal-billing": {
-      "last_sha": "e60edc7440ea22ad67fbd61649cc4d2deefc5c5c",
-      "total_commits": 950,
-      "total_lines": 436335,
+      "last_sha": "a821e17c2ad41c24bb617278bb7bf2be0a3f60f1",
+      "total_commits": 953,
+      "total_lines": 437008,
       "lang_lines": {
-        "TypeScript": 433494,
+        "TypeScript": 434164,
         "SQL": 1528,
-        "JavaScript": 694,
+        "JavaScript": 697,
         "Python": 555,
         "Shell": 64
       }
@@ -659,47 +659,47 @@
       }
     },
     "icetrahan/primal-hosted-www": {
-      "last_sha": "d565569c2c92633842b2255a84bc6633ac4d2aca",
-      "total_commits": 23,
-      "total_lines": 314,
+      "last_sha": "fa568f9b2391d1da53d37f60a86a365aefacf378",
+      "total_commits": 26,
+      "total_lines": 798,
       "lang_lines": {
-        "Python": 276,
+        "Python": 760,
         "JavaScript": 38
       }
     },
     "icetrahan/primal-hosted-api": {
-      "last_sha": "d551a316d925a095f9f94504082eb269f779fc23",
-      "total_commits": 277,
-      "total_lines": 75325,
+      "last_sha": "9210b8f1796b48a6c8459bf44a099fbd057e3f75",
+      "total_commits": 280,
+      "total_lines": 75583,
       "lang_lines": {
         "SQL": 1596,
-        "TypeScript": 72125,
+        "TypeScript": 72383,
         "Python": 1604
       }
     },
     "icetrahan/primal-tenant-web": {
-      "last_sha": "d299c1f584673f9e72d95d52f0dced1c6d2550fe",
-      "total_commits": 737,
-      "total_lines": 369384,
+      "last_sha": "20f724845d142362c7b4d9a94af291e38e4c49f7",
+      "total_commits": 740,
+      "total_lines": 369748,
       "lang_lines": {
-        "TypeScript": 368277,
+        "TypeScript": 368641,
         "Python": 1107
       }
     },
     "icetrahan/primal-hosted-bot": {
-      "last_sha": "c8a8732da8fe801b1def11ec2a3c8655816d9f40",
-      "total_commits": 366,
-      "total_lines": 217955,
+      "last_sha": "f11a4c2d3e6abe814d84906368c6740f8f168a88",
+      "total_commits": 369,
+      "total_lines": 219107,
       "lang_lines": {
-        "Python": 217955
+        "Python": 219107
       }
     },
     "icetrahan/primal-hosted-data": {
-      "last_sha": "6b179ce7233e368547105479ec92fd8d30f8522b",
-      "total_commits": 1544,
-      "total_lines": 385346,
+      "last_sha": "a58872612f89b1428dd64ab46cd5d6b4051e8102",
+      "total_commits": 1550,
+      "total_lines": 386322,
       "lang_lines": {
-        "TypeScript": 348766,
+        "TypeScript": 349742,
         "SQL": 18587,
         "Shell": 10219,
         "Python": 7774
@@ -727,22 +727,22 @@
       }
     },
     "icetrahan/isle-mod-rebuild": {
-      "last_sha": "bad77c5d54e6e18c3234ce4409f7634fbc3477dc",
-      "total_commits": 4,
-      "total_lines": 3864,
+      "last_sha": "e59f6e57b4210db836f9c4bbae8ff09bbd12ce1e",
+      "total_commits": 10,
+      "total_lines": 5620,
       "lang_lines": {
-        "C++": 2446,
-        "Python": 1418
+        "C++": 2580,
+        "Python": 3040
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "15be8a6cdb84c8f00fc1ed7821a130ee2d84c679",
-      "total_commits": 10358,
-      "total_lines": 367771,
+      "last_sha": "c0fcffb28ce747676073ef5b9202291c6d86da36",
+      "total_commits": 10488,
+      "total_lines": 371165,
       "lang_lines": {
-        "Python": 336832,
+        "Python": 340057,
         "Shell": 8113,
-        "JavaScript": 6071,
+        "JavaScript": 6240,
         "Lua": 134,
         "C#": 1850,
         "SQL": 7092,

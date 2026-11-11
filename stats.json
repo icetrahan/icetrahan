@@ -1,17 +1,17 @@
 {
   "total_repos_analyzed": 103,
-  "total_lines_added": 5522041,
-  "total_commits": 23479,
+  "total_lines_added": 5530065,
+  "total_commits": 23532,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 3922366,
-      "percentage": 71.0,
+      "lines_added": 3930217,
+      "percentage": 71.1,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 1133222,
+      "lines_added": 1133385,
       "percentage": 20.5,
       "color": "#3572A5"
     },
@@ -23,7 +23,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 62458,
+      "lines_added": 62468,
       "percentage": 1.1,
       "color": "#e38c00"
     },
@@ -42,7 +42,7 @@
     {
       "name": "Shell",
       "lines_added": 41439,
-      "percentage": 0.8,
+      "percentage": 0.7,
       "color": "#89e051"
     },
     {
@@ -479,11 +479,11 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "c1fed8b7f1bf2d7f5845e8fa7de326d26438064d",
-      "total_commits": 1754,
-      "total_lines": 1460208,
+      "last_sha": "3e50268a662a323e0f37aa38a479f5d3294a57d3",
+      "total_commits": 1775,
+      "total_lines": 1467233,
       "lang_lines": {
-        "TypeScript": 1435083,
+        "TypeScript": 1442108,
         "JavaScript": 8695,
         "SQL": 14531,
         "Shell": 1899
@@ -678,11 +678,11 @@
       }
     },
     "icetrahan/primal-tenant-web": {
-      "last_sha": "b694a61f398e2392fa243cd156d0f0f5c221b79f",
-      "total_commits": 826,
-      "total_lines": 393469,
+      "last_sha": "cc51b76d66d5e8e09383f4cd0d2eab35e1f5288f",
+      "total_commits": 829,
+      "total_lines": 394023,
       "lang_lines": {
-        "TypeScript": 392362,
+        "TypeScript": 392916,
         "Python": 1107
       }
     },
@@ -695,12 +695,12 @@
       }
     },
     "icetrahan/primal-hosted-data": {
-      "last_sha": "b1760a28236c5514c56190d38c34482572fe89e8",
-      "total_commits": 1759,
-      "total_lines": 428316,
+      "last_sha": "23eeee32e1e8549d88755c45b31e17cc12804838",
+      "total_commits": 1765,
+      "total_lines": 428590,
       "lang_lines": {
-        "TypeScript": 388817,
-        "SQL": 19427,
+        "TypeScript": 389081,
+        "SQL": 19437,
         "Shell": 10626,
         "Python": 9446
       }
@@ -736,11 +736,11 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "7d3897e0bbc363522704e92b463f53c0857ba382",
-      "total_commits": 13037,
-      "total_lines": 477261,
+      "last_sha": "25bb6e0069e778c0b6f51186a940c9225ae63673",
+      "total_commits": 13056,
+      "total_lines": 477424,
       "lang_lines": {
-        "Python": 437603,
+        "Python": 437766,
         "Shell": 8181,
         "JavaScript": 13538,
         "Lua": 134,
@@ -881,11 +881,11 @@
       }
     },
     "DungeonNexusEntertainment/DNEWebsite": {
-      "last_sha": "86465966920a7f4039db1d93b11cb81de0881439",
-      "total_commits": 134,
-      "total_lines": 70789,
+      "last_sha": "253fb7b10eaec52cabcfb8909f4982fc0c998ca1",
+      "total_commits": 135,
+      "total_lines": 70797,
       "lang_lines": {
-        "TypeScript": 70150,
+        "TypeScript": 70158,
         "SQL": 639
       }
     },
@@ -940,8 +940,8 @@
       }
     },
     "Arvo-Devs/arvo-coordination": {
-      "last_sha": "6a8c6f30f10b8f35e3a50c9b25fdd50e13795f92",
-      "total_commits": 71,
+      "last_sha": "50c0dfc0363cd254d7cc68e80bd2a46e445b0da4",
+      "total_commits": 74,
       "total_lines": 429,
       "lang_lines": {
         "Shell": 373,

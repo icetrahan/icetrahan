@@ -1,18 +1,18 @@
 {
   "total_repos_analyzed": 103,
-  "total_lines_added": 5561064,
-  "total_commits": 23850,
+  "total_lines_added": 5597496,
+  "total_commits": 23946,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 3953306,
-      "percentage": 71.1,
+      "lines_added": 3985222,
+      "percentage": 71.2,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 1140113,
-      "percentage": 20.5,
+      "lines_added": 1143712,
+      "percentage": 20.4,
       "color": "#3572A5"
     },
     {
@@ -23,7 +23,7 @@
     },
     {
       "name": "SQL",
-      "lines_added": 62806,
+      "lines_added": 63723,
       "percentage": 1.1,
       "color": "#e38c00"
     },
@@ -479,13 +479,13 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "3e50268a662a323e0f37aa38a479f5d3294a57d3",
-      "total_commits": 1775,
-      "total_lines": 1467233,
+      "last_sha": "1e48c2c24994ea9db3c2edbe77208bee8439f9d8",
+      "total_commits": 1805,
+      "total_lines": 1498481,
       "lang_lines": {
-        "TypeScript": 1442108,
+        "TypeScript": 1472509,
         "JavaScript": 8695,
-        "SQL": 14531,
+        "SQL": 15378,
         "Shell": 1899
       }
     },
@@ -695,12 +695,12 @@
       }
     },
     "icetrahan/primal-hosted-data": {
-      "last_sha": "60831aa22109134b3532f642acdf4d9220b14c67",
-      "total_commits": 1787,
-      "total_lines": 436532,
+      "last_sha": "6c88700b27818d0be08c802a90774d8a98e58849",
+      "total_commits": 1791,
+      "total_lines": 438117,
       "lang_lines": {
-        "TypeScript": 396715,
-        "SQL": 19745,
+        "TypeScript": 398230,
+        "SQL": 19815,
         "Shell": 10626,
         "Python": 9446
       }
@@ -736,11 +736,11 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "92bd53ac3ddfcfbc3f640844f0620b0a27d0ee71",
-      "total_commits": 13276,
-      "total_lines": 482880,
+      "last_sha": "13f5e304a8ce101ae1b6d41a2d05a492ff662219",
+      "total_commits": 13332,
+      "total_lines": 486479,
       "lang_lines": {
-        "Python": 442974,
+        "Python": 446573,
         "Shell": 8197,
         "JavaScript": 13538,
         "Lua": 134,
@@ -940,8 +940,8 @@
       }
     },
     "Arvo-Devs/arvo-coordination": {
-      "last_sha": "9d14b51d3dc73fc434b203a69c732e493ab9e69c",
-      "total_commits": 101,
+      "last_sha": "2bdad5353e9153feb50f2fb118700ca56ed3aca2",
+      "total_commits": 107,
       "total_lines": 429,
       "lang_lines": {
         "Shell": 373,

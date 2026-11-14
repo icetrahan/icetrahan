@@ -1,35 +1,35 @@
 {
   "total_repos_analyzed": 103,
-  "total_lines_added": 5633294,
-  "total_commits": 24302,
+  "total_lines_added": 5646722,
+  "total_commits": 24458,
   "languages": [
     {
       "name": "TypeScript",
-      "lines_added": 3996648,
-      "percentage": 71.0,
+      "lines_added": 4002470,
+      "percentage": 70.9,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "lines_added": 1164737,
+      "lines_added": 1169430,
       "percentage": 20.7,
       "color": "#3572A5"
     },
     {
       "name": "JavaScript",
-      "lines_added": 251389,
+      "lines_added": 253428,
       "percentage": 4.5,
       "color": "#f1e05a"
     },
     {
       "name": "SQL",
-      "lines_added": 63772,
+      "lines_added": 64307,
       "percentage": 1.1,
       "color": "#e38c00"
     },
     {
       "name": "C++",
-      "lines_added": 59349,
+      "lines_added": 59375,
       "percentage": 1.1,
       "color": "#f34b7d"
     },
@@ -41,7 +41,7 @@
     },
     {
       "name": "Shell",
-      "lines_added": 42108,
+      "lines_added": 42134,
       "percentage": 0.7,
       "color": "#89e051"
     },
@@ -53,7 +53,7 @@
     },
     {
       "name": "C#",
-      "lines_added": 2247,
+      "lines_added": 2534,
       "percentage": 0.0,
       "color": "#178600"
     },
@@ -479,11 +479,11 @@
       }
     },
     "Arvo-Devs/delete-my-leaks": {
-      "last_sha": "1e48c2c24994ea9db3c2edbe77208bee8439f9d8",
-      "total_commits": 1805,
-      "total_lines": 1498481,
+      "last_sha": "c8bf91e99efc79135983fe79bdd59f2cb7bae614",
+      "total_commits": 1817,
+      "total_lines": 1503577,
       "lang_lines": {
-        "TypeScript": 1472509,
+        "TypeScript": 1477605,
         "JavaScript": 8695,
         "SQL": 15378,
         "Shell": 1899
@@ -678,12 +678,13 @@
       }
     },
     "icetrahan/primal-tenant-web": {
-      "last_sha": "f7c45f7ecb20b0cf1c38575294e3a2380de92e30",
-      "total_commits": 859,
-      "total_lines": 407121,
+      "last_sha": "c7653656ddaf60eeef8239c3be99cb850405a35d",
+      "total_commits": 862,
+      "total_lines": 409089,
       "lang_lines": {
-        "TypeScript": 405756,
-        "Python": 1365
+        "TypeScript": 406230,
+        "Python": 1365,
+        "JavaScript": 1494
       }
     },
     "icetrahan/primal-hosted-bot": {
@@ -695,11 +696,11 @@
       }
     },
     "icetrahan/primal-hosted-data": {
-      "last_sha": "deb37acb57a230962c7b26b9f48bffe934780e0c",
-      "total_commits": 1826,
-      "total_lines": 444129,
+      "last_sha": "2a1c3504863a608565dbee350479821939265a3f",
+      "total_commits": 1831,
+      "total_lines": 444249,
       "lang_lines": {
-        "TypeScript": 400519,
+        "TypeScript": 400639,
         "SQL": 19815,
         "Shell": 10659,
         "Python": 12309,
@@ -728,28 +729,28 @@
       }
     },
     "icetrahan/isle-mod-rebuild": {
-      "last_sha": "6747b1b53ecf71da0eb3b3a094da47bb6903d906",
-      "total_commits": 65,
-      "total_lines": 13730,
+      "last_sha": "c9cea895462c3533ad1812498e21b104ace9e6ea",
+      "total_commits": 70,
+      "total_lines": 14804,
       "lang_lines": {
         "C++": 3733,
-        "Python": 9997
+        "Python": 11071
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "9c51f7786cc8e63a3e7f8200db8757f910bad291",
-      "total_commits": 13548,
-      "total_lines": 499895,
+      "last_sha": "fdecfe1bac5101cbed3fa3d1eb167a85a09e9d48",
+      "total_commits": 13673,
+      "total_lines": 504970,
       "lang_lines": {
-        "Python": 458832,
-        "Shell": 8197,
-        "JavaScript": 14283,
+        "Python": 462451,
+        "Shell": 8217,
+        "JavaScript": 14828,
         "Lua": 134,
-        "C#": 2208,
-        "SQL": 7978,
-        "TypeScript": 7867,
+        "C#": 2495,
+        "SQL": 8424,
+        "TypeScript": 7999,
         "Java": 105,
-        "C++": 291
+        "C++": 317
       }
     },
     "icetrahan/isle-mod-legacy": {
@@ -941,13 +942,13 @@
       }
     },
     "Arvo-Devs/arvo-coordination": {
-      "last_sha": "be51b77375122507eefc250363af0cb0f984ff42",
-      "total_commits": 115,
-      "total_lines": 477,
+      "last_sha": "c8666e84bbae65c44a5c3f9382205df30990e95e",
+      "total_commits": 121,
+      "total_lines": 572,
       "lang_lines": {
-        "Shell": 379,
+        "Shell": 385,
         "JavaScript": 56,
-        "SQL": 42
+        "SQL": 131
       }
     },
     "Arvo-Devs/betterfanslink": {

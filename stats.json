@@ -1,7 +1,7 @@
 {
   "total_repos_analyzed": 103,
-  "total_lines_added": 5756466,
-  "total_commits": 25097,
+  "total_lines_added": 5758899,
+  "total_commits": 25181,
   "languages": [
     {
       "name": "TypeScript",
@@ -11,7 +11,7 @@
     },
     {
       "name": "Python",
-      "lines_added": 1204032,
+      "lines_added": 1205933,
       "percentage": 20.9,
       "color": "#3572A5"
     },
@@ -23,13 +23,13 @@
     },
     {
       "name": "SQL",
-      "lines_added": 65200,
+      "lines_added": 65229,
       "percentage": 1.1,
       "color": "#e38c00"
     },
     {
       "name": "C++",
-      "lines_added": 59801,
+      "lines_added": 60280,
       "percentage": 1.0,
       "color": "#f34b7d"
     },
@@ -41,7 +41,7 @@
     },
     {
       "name": "Shell",
-      "lines_added": 42166,
+      "lines_added": 42190,
       "percentage": 0.7,
       "color": "#89e051"
     },
@@ -738,11 +738,11 @@
       }
     },
     "icetrahan/primal-everything-meta": {
-      "last_sha": "dcc59a8ce6d19cd7d8475f67111f040d6e27c25b",
-      "total_commits": 14062,
-      "total_lines": 511417,
+      "last_sha": "845811b8ceb6fb550d7dc45d5bb7c70ff46da89d",
+      "total_commits": 14145,
+      "total_lines": 513797,
       "lang_lines": {
-        "Python": 468491,
+        "Python": 470392,
         "Shell": 8249,
         "JavaScript": 14828,
         "Lua": 134,
@@ -750,7 +750,7 @@
         "SQL": 8714,
         "TypeScript": 7999,
         "Java": 105,
-        "C++": 387
+        "C++": 866
       }
     },
     "icetrahan/isle-mod-legacy": {
@@ -942,13 +942,13 @@
       }
     },
     "Arvo-Devs/arvo-coordination": {
-      "last_sha": "a3b9f120321aa53a583e0f6d7b60b42b014a4d08",
-      "total_commits": 123,
-      "total_lines": 606,
+      "last_sha": "4737c949b5c03a959fbe805f12e67db6cfaa9bec",
+      "total_commits": 124,
+      "total_lines": 659,
       "lang_lines": {
-        "Shell": 385,
+        "Shell": 409,
         "JavaScript": 56,
-        "SQL": 165
+        "SQL": 194
       }
     },
     "Arvo-Devs/betterfanslink": {
